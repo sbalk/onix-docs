@@ -325,7 +325,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="onix.html">onix.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="build.html">Building liboni</a></li>
 <li class="toctree-l2"><a class="reference internal" href="liboni-example.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="making-drivers.html">Intefacing with Device Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making-drivers.html">Writing Driver Translators</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="driver-translators/index.html">Driver Translators</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="driver-translators/test.html">Test Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="driver-translators/riffa.html">RIFFA</a></li>
@@ -613,7 +613,7 @@ of retrieved bytes were different from <code class="docutils literal notranslate
 <dt class="sig sig-object c" id="c.oni_driver_set_opt_callback">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">oni_driver_set_opt_callback</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.oni_driver_ctx" title="oni_driver_ctx"><span class="n"><span class="pre">oni_driver_ctx</span></span></a><span class="w"> </span><span class="n"><span class="pre">driver_ctx</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">oni_option</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">option_len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.oni_driver_set_opt_callback" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>This function gets called as the last step after a successful <a class="reference internal" href="oni.html#c.oni_set_opt" title="oni_set_opt"><code class="xref c c-func docutils literal notranslate"><span class="pre">oni_set_opt()</span></code></a>. The driver can optionally
-use this for any internal adjustment required. See <a class="reference internal" href="making-drivers.html#making-drivers"><span class="std std-ref">Intefacing with Device Drivers</span></a> for examples. If this function is
+use this for any internal adjustment required. See <a class="reference internal" href="making-drivers.html#making-drivers"><span class="std std-ref">Writing Driver Translators</span></a> for examples. If this function is
 not used, it is safe to do nothing and return <a class="reference internal" href="onidefs.html#c.&#64;oni_error_enum.ONI_ESUCCESS" title="ONI_ESUCCESS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">ONI_ESUCCESS</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

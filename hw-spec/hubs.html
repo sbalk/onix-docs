@@ -389,24 +389,24 @@ document.write(`
 hardware aggregates connected to the controller (e.g. a headstage for neural
 acquisition) or a logical partition of existing hardware (e.g. a collection of
 devices implemented in the same firmware as the controller). Hubs that exist on
-hardware that is physically separated from the <a class="reference external" href="#controller">controller</a> are
+hardware that is physically separated from the <a class="reference internal" href="controller.html#controller"><span class="std std-ref">controller</span></a> are
 referred as remote hubs, while a hubs existing on the controller are local hubs.
 An ONI-compliant system MUST implement at least one local hub, located at
-<code class="docutils literal notranslate"><span class="pre">`Hub_Index</span> <span class="pre">0</span></code> &lt;#dev-address&gt;`__ and sharing the clock of controller’s main
+<a class="reference internal" href="dev_table.html#dev-address"><span class="std std-ref">Hub_Index 0</span></a> and sharing the clock of controller’s main
 state machine, and can implement up to 253 additional hubs, local or remote. All
-devices reflecting or modifying<a class="reference external" href="#controller">controller</a> state the
+devices reflecting or modifying <a class="reference internal" href="controller.html#controller"><span class="std std-ref">controller</span></a> state the
 controller and/or reporting errors or similar status messages must be
 implemented in local hub 0.</p>
 <p>Every hub MUST have access high-resolution timer that is used by all its devices
-when to generate a <code class="docutils literal notranslate"><span class="pre">Hub_Timestamp</span></code> for a <a class="reference external" href="#dev-sample">data sample</a>.</p>
+when to generate a <code class="docutils literal notranslate"><span class="pre">Hub_Timestamp</span></code> for a <a class="reference internal" href="devices.html#dev-sample"><span class="std std-ref">data sample</span></a>.</p>
 <p>Data from all the devices of a hub is collected and passed to the controller.
 The specific interface between a hub and the controller is highly
-implementation-dependent and, thus, not in the scope of this document. It is the
-duty of the <a class="reference external" href="#port-intercon">port interconnect</a> to provide the controller
-with all the device descriptors and communication channels in a transparent
-manner. It is common for a remote hub to feature a centralized IC (e.g. an FPGA
-or microcontroller) integrating the device controllers and communication
-interface to fill this duty, but other schemes are possible.</p>
+implementation-dependent and, thus, not in the scope of this document. In
+anycase, it is the duty of the hub to to provide the controller with all the
+device descriptors and communication channels in a transparent manner. It is
+common for a remote hub to feature a centralized IC (e.g. an FPGA or
+microcontroller) integrating the device controllers and communication interface
+to fill this duty, but other schemes are possible.</p>
 <p>Multiple hubs are differentiated through a unique identifier, or Hardware ID.
 This identifier represents a specific implementation of a hub, defined by a
 particular collection of devices on a specific hardware platform communicating
@@ -420,11 +420,11 @@ An information device on each hub and a heartbeat device in local hub 0.</p>
 <section id="information-device">
 <h3>Information Device<a class="headerlink" href="#information-device" title="Permalink to this heading">#</a></h3>
 <p>Every hub in an ONI system must feature a special device, located at
-<code class="docutils literal notranslate"><span class="pre">`Device_Address</span></code> &lt;#dev-table&gt;`__ 0xFE, which supplies information about the
-hub. Because this device is required to exist at a fixed address, it is not
-listed to the device table and, thus, has no <a class="reference external" href="#dev-desc">device descriptor</a>.
-The only communication channel it must expose is the register interface, and it
-must not include any streams. The required register map is:</p>
+<a class="reference internal" href="dev_table.html#dev-table"><span class="std std-ref">Device_Address</span></a> 0xFE, which supplies information about the hub.
+Because this device is required to exist at a fixed address, it is not listed
+to the device table and, thus, has no <a class="reference internal" href="devices.html#dev-desc"><span class="std std-ref">device descriptor</span></a>.  The only
+communication channel it must expose is the register interface, and it must not
+include any streams. The required register map is:</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Address</p></th>
@@ -456,7 +456,7 @@ must not include any streams. The required register map is:</p>
 the complete width. The detailed meaning of each register is:</p>
 <ul>
 <li><p><strong>Hardware ID</strong>: A 32-bit value that uniquely identifies the hub. It has a
-similar format to the <a class="reference external" href="#dev-id">Device ID</a>:</p>
+similar format to the <a class="reference internal" href="devices.html#dev-id"><span class="std std-ref">Device ID</span></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Reserved</span><span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="n">bit</span><span class="p">)</span><span class="o">.</span><span class="n">Company</span><span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="n">bit</span><span class="p">)</span><span class="o">.</span><span class="n">Hub</span><span class="p">(</span><span class="mi">16</span><span class="o">-</span><span class="n">bit</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -498,11 +498,11 @@ and its firmware, where that hub is located.</p>
 <section id="heartbeat-device">
 <h3>Heartbeat Device<a class="headerlink" href="#heartbeat-device" title="Permalink to this heading">#</a></h3>
 <p>Local hub 0 must contain a “heartbeat device”. This is a simple device that
-periodically produces <a class="reference external" href="#dev-sample">samples</a> containing only the
-<code class="docutils literal notranslate"><span class="pre">Hub</span> <span class="pre">Timestamp</span></code> and an empty payload, at a minimum rate of 10 Hz. Its
-<code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> register must be fixed and always active. This device ensures that
-API calls accessing the read stream are guaranteed to be unblocked in the case
-that no other devices in the system are producing data.</p>
+periodically produces <a class="reference internal" href="devices.html#dev-sample"><span class="std std-ref">samples</span></a> containing only the <code class="docutils literal notranslate"><span class="pre">Hub</span>
+<span class="pre">Timestamp</span></code> and an empty payload, at a minimum rate of 10 Hz. Its <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>
+register must be fixed and always active. This device ensures that API calls
+accessing the read stream are guaranteed to be unblocked in the case that no
+other devices in the system are producing data.</p>
 </section>
 </section>
 </section>
