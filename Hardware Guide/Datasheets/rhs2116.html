@@ -1,0 +1,1935 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>RHS2116 &#8212; Open Ephys ONIX  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/copyURLToClipboard.js"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Datasheets/rhs2116';</script>
+    <link rel="icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RHS2116 Trigger" href="rhs2116-trigger.html" />
+    <link rel="prev" title="RHD2164" href="rhd2164.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/onix_open_ephys_logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/onix_open_ephys_logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Getting%20Started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                         Hardware Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../API%20Reference/index.html">
+                         API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
+                         Software Guide
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org">
+                    Open Ephys
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/onix-docs" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Getting%20Started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                         Hardware Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../API%20Reference/index.html">
+                         API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
+                         Software Guide
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org">
+                    Open Ephys
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/onix-docs" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PCIe%20Host/index.html">PCIe Host</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PCIe%20Host/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PCIe%20Host/setup-windows.html">Setup Guide for Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PCIe%20Host/updating-firmware.html">Updating Firmware in Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PCIe%20Host/multi-board-sync.html">Synchronizing Multiple PCIe Hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PCIe%20Host/bracket-assembly.html">PCIe Bracket Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Breakout%20Board/index.html">Breakout Board</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Breakout%20Board/setup.html">Breakout Board Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Headstages/index.html">Headstages</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/serialization.html">Coaxial Data Serialization &amp; Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/tethers.html">Making Coaxial Tethers</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Headstages/headstage-64/index.html">Headstage-64</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Miniscopes/index.html">Miniscopes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Commutators/index.html">Coaxial Commutators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Commutators/setup.html">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Commutators/usage.html">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lighthouses/index.html">3D-Tracking Lighthouses</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lighthouses/setup.html">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Adapters%20%26%20EIBs/index.html">Adapters &amp; EIBs</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Adapters%20%26%20EIBs/eib-64.html">EIB-64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Adapters%20%26%20EIBs/eib-64-large.html">EIB-64L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Adapters%20%26%20EIBs/omnetics-adapter-64.html">64-Channel Omnetics Adpater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Adapters%20%26%20EIBs/nano-z-adapter-64.html">64-Channel Nano-Z Adapter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">ONI Datasheets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="heartbeat.html">Heartbeat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load-test.html">Load Test Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-usage.html">Memory Usage Monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fmc-analog-io.html">FMC Host Analog IO Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fmc-digital-io.html">FMC Host Digital IO Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fmc-clock-out.html">FMC Host Clock Output Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fmc-link-control.html">FMC Link Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bno055.html">BNO055</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rhd2164.html">RHD2164</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">RHS2116</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rhs2116-trigger.html">RHS2116 Trigger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estim-hs64.html">HS64 Electrical Stimulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ostim-hs64.html">HS64 Optical Stimulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts4231-v1-array.html">TS4231 Array for Vive V1 Base Stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuropixels-v1.html">Neuropixels V1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ds90ub9x-raw.html">DS90UB9X Raw Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-0.html">Test0 Device</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Connections%20%26%20Cables/index.html">Connections and Cables</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link"> Hardware Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">ONI Datasheets</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">RHS2116</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="rhs2116">
+<span id="onidatasheet-rhs2116"></span><h1>RHS2116<a class="headerlink" href="#rhs2116" title="Permalink to this heading">#</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Jonathan P. Newman</p>
+</dd>
+<dt class="field-even">Version<span class="colon">:</span></dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">IO<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Frame Source, Register Access</p>
+</dd>
+<dt class="field-even">ONIX ID<span class="colon">:</span></dt>
+<dd class="field-even"><p>31</p>
+</dd>
+</dl>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<p>The <strong>RHS2116</strong> device acquires data and controls stimulation from an Intan
+<a class="reference external" href="https://intantech.com/files/Intan_RHS2116_datasheet.pdf">RHS2116 bioamplifier and stimulator chip</a>.</p>
+<ul class="simple">
+<li><p>Fixed sampling rate: 30193.236714975847 kHz/channel</p></li>
+<li><p>Real-time control of stimulation sequences</p></li>
+<li><p>Real-time control of many acquisition registers (e.g. filter settings,
+artifact recovery parameters, etc.)</p></li>
+</ul>
+</section>
+<section id="register-programming">
+<h2>Register Programming<a class="headerlink" href="#register-programming" title="Permalink to this heading">#</a></h2>
+<section id="managed-registers">
+<h3>Managed Registers<a class="headerlink" href="#managed-registers" title="Permalink to this heading">#</a></h3>
+<p>Managed register access is provided at offset 0x10000.</p>
+<table class="table" id="id1">
+<caption><span class="caption-text">Managed Registers</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Address</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Access</p></th>
+<th class="head"><p>Time of Effect</p></th>
+<th class="head"><p>POR Value</p></th>
+<th class="head"><p>Reset Action</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x10000</p></td>
+<td><p>ENABLE</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>Implementation dependent, see hub documentation</p></td>
+<td><p>None</p></td>
+<td><p>The LSB is used to enable or disable the device data stream:</p>
+<ul class="simple">
+<li><p>0x0: data output disabled</p></li>
+<li><p>0x1: data output enabled</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>0x10001</p></td>
+<td><p>MAXDELTAS</p></td>
+<td><p>R</p></td>
+<td><p>N/A</p></td>
+<td><p>Implementation dependent, see hub documentation</p></td>
+<td><p>None</p></td>
+<td><p>Maximum number of deltas in the delta table</p></td>
+</tr>
+<tr class="row-even"><td><p>0x10002</p></td>
+<td><p>NUMDELTAS</p></td>
+<td><p>R/W</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Number of deltas in the delta table. Valid values are 0-MAXDELTAS.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x10003</p></td>
+<td><p>DELTAIDXTIME</p></td>
+<td><p>W</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>The delta table index and corresponding application delta application
+time. Time value should increase monontonically with Index value.
+SEQERROR will be set to ‘1’ and headstage reset will be required, along
+with corrected stimulus defintion, in order to apply stimuli.</p>
+<ul class="simple">
+<li><p>32-bits: [index_9, index_8, …, index_0, time_21, time_20, …, time_0]</p></li>
+<li><p>index_x: The index of the delta table to program with Time and
+DELTAPOLEN values.</p></li>
+<li><p>time_x: Time in units of stim_seq_clk_i cycles, following a trigger,
+at which the DELTAPOLEN value[Index] is applied.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>0x10004</p></td>
+<td><p>DELTAPOLEN</p></td>
+<td><p>W</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>The polarity and enable vectors applied at time DELTATIMESAMPLES at
+DELTAIDXANDTIME[index]</p>
+<ul class="simple">
+<li><p>32 bits: [pol_15, pol_14, …, pol_o, en_15, en_14, …, en_0]</p></li>
+<li><p>pol_x = ‘0’: channel x is negative, pol_x = ‘1’: channel x is
+positive</p></li>
+<li><p>en_x = ‘0’: channel x is disabled, pol_x = ‘1’: channel x is enabled</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>0x10005</p></td>
+<td><p>SEQERROR</p></td>
+<td><p>R</p></td>
+<td><p>N/A</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>Invalid sequence encountered, the device requires a reset with an
+updated sequence definition.  Stimulation on all channels in disabled
+until this occurs.</p></td>
+</tr>
+<tr class="row-even"><td><p>0x10006</p></td>
+<td><p>TRIGGER</p></td>
+<td><p>W</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>Writing 1 to this register will trigger a stimulation sequence for this
+device.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x10007</p></td>
+<td><p>FASTSETTLESAMPLES</p></td>
+<td><p>R/W</p></td>
+<td><p>Immediate</p></td>
+<td><p>10</p></td>
+<td><p>None</p></td>
+<td><p>Number of round-robbin samples to apply charge balance following the
+conclusion of a stimulus pulse. 30 (1 msec) is the maximum. Typically
+set the 2.5/f_{h} where f_{h} is upper analog bandwidth of setting.</p></td>
+</tr>
+<tr class="row-even"><td><p>0x10008</p></td>
+<td><p>RESPECTSTIMACTIVE</p></td>
+<td><p>W</p></td>
+<td><p>Immediate</p></td>
+<td><p>1</p></td>
+<td><p>None</p></td>
+<td><p>Determines when artifact recovery sequence is applied to this chip.</p>
+<ul class="simple">
+<li><p>0x00: This device only cares about recovering from stimuli that it
+itself creates.</p></li>
+<li><p>0x01: This device will apply the LPB version of the low pass filter
+if stim_active_i goes high, regardless of whether this device created
+the stimulus.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="unmanaged-registers">
+<h3>Unmanaged Registers<a class="headerlink" href="#unmanaged-registers" title="Permalink to this heading">#</a></h3>
+<p>Read and write access is provided to the registers detailed in the <a class="reference external" href="https://intantech.com/files/Intan_RHS2116_series_datasheet.pdf">RHS2116
+series datasheet</a>.</p>
+<ul>
+<li><p>Registers are 32-bits wide</p></li>
+<li><p>Addresses and functions are determined by the RHS2116 datasheet</p></li>
+<li><p>Reading and writing is not direct. Register values are stored in RAM and
+applied when the SPI controller encounters them.</p></li>
+<li><p>Registers have various designations indicating when they are applied. The
+table below uses the following labels to define when a register change takes
+effect.</p>
+<dl class="simple">
+<dt>RESET</dt><dd><p>Register value is applied after a reset.</p>
+</dd>
+<dt>RT (Real-time)</dt><dd><p>Register value can be changed during operation. There is worst-case delay
+of ~400 usec for the application to occur. This occurs if there are
+concurrent SEQ register applications, which take precedence. Typically, the
+delay is ~170 usec.</p>
+</dd>
+<dt>SEQ (Sequence)</dt><dd><p>Register programming is handled by the internal stimulus sequencer,
+which itself is configured using managed registers.  These should not be
+manipulated externally.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<table class="table" id="id2">
+<caption><span class="caption-text">Unmanaged Registers</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Address</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>POR Bits</p></th>
+<th class="head"><p>POR Value</p></th>
+<th class="head"><p>Time of Effect</p></th>
+<th class="head"><p>Access</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td><p>BIAS</p></td>
+<td><p>ADC and MUX bias currents</p></td>
+<td><p>0000000011000100</p></td>
+<td><p>ADC buffer bias = 3; MUX bias = 4 -&gt; fs &gt;440 kS/s</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>FORMAT</p></td>
+<td><p>Conversion format</p></td>
+<td><p>0000010110001111</p></td>
+<td><p>Unsigned</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x02</p></td>
+<td><p>ZCHECK</p></td>
+<td><p>Impediace check</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>Disabled</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x03</p></td>
+<td><p>DAC</p></td>
+<td><p>Impedance check DAC</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>Disabled</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x04</p></td>
+<td><p>BW0</p></td>
+<td><p>Upper analog bandwidth 1</p></td>
+<td><p>0000000000010001</p></td>
+<td><p>RH1: sel2: 0; sel1: 17 -&gt; upper cutoff 10 kHz</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>BW1</p></td>
+<td><p>Upper analog bandwidth 2</p></td>
+<td><p>0000000000010000</p></td>
+<td><p>RH2: sel2: 0; sel1: 16 -&gt; upper cutoff 10 kHz</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x06</p></td>
+<td><p>BW2</p></td>
+<td><p>Lower analog bandwidth A</p></td>
+<td><p>0011111000010000</p></td>
+<td><p>RL_A: sel3: 1; sel2: 60; sel1: 16 -&gt; lower cutoff 0.1 Hz</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x07</p></td>
+<td><p>BW3</p></td>
+<td><p>Lower analog bandwidth B</p></td>
+<td><p>0000000000010001</p></td>
+<td><p>RL_B: sel3: 0; sel2: 0; sel1L: 17 -&gt; lower cutoff 250 Hz</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x08</p></td>
+<td><p>PWR</p></td>
+<td><p>Low-noise ephys amplifier power</p></td>
+<td><p>1111111111111111</p></td>
+<td><p>All on</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x09</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0A</p></td>
+<td><p>SETTLE</p></td>
+<td><p>Amplifier fast settel state</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>No fast settle</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0C</p></td>
+<td><p>LOWAB</p></td>
+<td><p>Select between RL_A and RL_B for each amplifier.</p></td>
+<td><p>1111111111111111</p></td>
+<td><p>RL_A for every channel</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0E</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x10</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x11</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x12</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x13</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x14</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x15</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x16</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x17</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x18</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x19</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x1A</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x1C</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x1E</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x20</p></td>
+<td><p>STIMENA</p></td>
+<td><p>Stim enable magic word A.</p></td>
+<td><p>1010101010101010</p></td>
+<td><p>Enabled</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x21</p></td>
+<td><p>STIMENB</p></td>
+<td><p>Stim enable magic word B. Enabled.</p></td>
+<td><p>0000000011111111</p></td>
+<td><p>Enabled</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x22</p></td>
+<td><p>STEPSZ</p></td>
+<td><p>Stimulator current step size</p></td>
+<td><p>0000000010100110</p></td>
+<td><p>sel3: 0; sel2: 0; sel1: 38 -&gt; 5 uA step</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x23</p></td>
+<td><p>STIMBIAS</p></td>
+<td><p>Stimulator circuit bias current</p></td>
+<td><p>0000000011101110</p></td>
+<td><p>Pbias: 14; Nbias: 14 -&gt; optimal for 5uA step</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x24</p></td>
+<td><p>RECVOLT</p></td>
+<td><p>Charge recovery target voltage</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0 volts</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x25</p></td>
+<td><p>RECCUR</p></td>
+<td><p>Charge recovery current limit</p></td>
+<td><p>0000000000001001</p></td>
+<td><p>sel3: 0; sel2: 0; se11: 9 -&gt; 1uA</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x26</p></td>
+<td><p>DCPWR</p></td>
+<td><p>DC amplifier power</p></td>
+<td><p>1111111111111111</p></td>
+<td><p>All on</p></td>
+<td><p>RESET</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x27</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x28</p></td>
+<td><p>COMPLI</p></td>
+<td><p>Compliance monitor. <em>Not currently implemented, register valye does not reflect COMPLI state.</em></p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x29</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x2A</p></td>
+<td><p>STIMON</p></td>
+<td><p>Stimulation on/off.</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>All off</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x2C</p></td>
+<td><p>STIMPOL</p></td>
+<td><p>Stimulation polarity.</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>All negative</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x2E</p></td>
+<td><p>RECOV</p></td>
+<td><p>Charge recovery switch state. Open.</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>Open</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x30</p></td>
+<td><p>LIMREC</p></td>
+<td><p>Current-lmited charge recovery switch state. Open.</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>Open</p></td>
+<td><p>SEQ</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x31</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x32</p></td>
+<td><p>FAULT</p></td>
+<td><p>Fault current detector. <em>Not currently implemented, register valye does not reflect FAULT state.</em></p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x33</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x34</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x35</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x36</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x37</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x38</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x39</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x3A</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x3B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x3C</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x3D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x3E</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x3F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x40</p></td>
+<td><p>NEG00</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x41</p></td>
+<td><p>NEG01</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x42</p></td>
+<td><p>NEG02</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x43</p></td>
+<td><p>NEG03</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x44</p></td>
+<td><p>NEG04</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x45</p></td>
+<td><p>NEG05</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x46</p></td>
+<td><p>NEG06</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x47</p></td>
+<td><p>NEG07</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x48</p></td>
+<td><p>NEG08</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x49</p></td>
+<td><p>NEG09</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x4A</p></td>
+<td><p>NEG10</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4B</p></td>
+<td><p>NEG11</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x4C</p></td>
+<td><p>NEG12</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4D</p></td>
+<td><p>NEG13</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x4E</p></td>
+<td><p>NEG14</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4F</p></td>
+<td><p>NEG15</p></td>
+<td><p>Negative Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x50</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x51</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x52</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x53</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x54</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x55</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x56</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x57</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x58</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x59</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x5A</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x5B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x5C</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x5D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x5E</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x5F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x60</p></td>
+<td><p>POS00</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x61</p></td>
+<td><p>POS01</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x62</p></td>
+<td><p>POS02</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x63</p></td>
+<td><p>POS03</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x64</p></td>
+<td><p>POS04</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x65</p></td>
+<td><p>POS05</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x66</p></td>
+<td><p>POS06</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x67</p></td>
+<td><p>POS07</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x68</p></td>
+<td><p>POS08</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x69</p></td>
+<td><p>POS09</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x6A</p></td>
+<td><p>POS10</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x6B</p></td>
+<td><p>POS11</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x6C</p></td>
+<td><p>POS12</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x6D</p></td>
+<td><p>POS13</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x6E</p></td>
+<td><p>POS14</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x6F</p></td>
+<td><p>POS15</p></td>
+<td><p>Positive Stimulation Current Magnitude</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>0</p></td>
+<td><p>RT</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x70</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x71</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x72</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x73</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x74</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x75</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x76</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x77</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x78</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x79</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x7A</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x7B</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x7C</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x7D</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-even"><td><p>0x7E</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x7F</p></td>
+<td><p>Reserved</p></td>
+<td><p>N/A</p></td>
+<td><p>0000000000000000</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>R/W</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="device-to-host-data-frames">
+<span id="onidatasheet-rhs2116-d2h"></span><h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Permalink to this heading">#</a></h2>
+<p>Each frame transmitted to the host consists of a 16x AC ephys samples
+and 16x high-voltage DC samples for monitoring compliance and stimulation
+waveforms.</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 64, name: "Acquisition Clock Counter", type: 0},
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 74},
+
+      {bits: 64, name: "Hub Clock Counter", type: 3},
+
+      {bits: 16, name: "Channel 0 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 1 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 2 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 3 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 4 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 5 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 6 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 7 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 8 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 9 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 10 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 11 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 12 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 13 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 14 AC Voltage", type: 4},
+      {bits: 16, name: "Channel 15 AC Voltage", type: 4},
+
+      {bits: 6},
+      {bits: 10, name: "Channel 0 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 1 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 2 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 3 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 4 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 5 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 6 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 7 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 8 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 9 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 10 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 11 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 12 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 13 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 14 DC Voltage", type: 5},
+      {bits: 6},
+      {bits: 10, name: "Channel 15 DC Voltage", type: 5},
+
+      {bits: 16},
+
+    ],
+    config: {bits: 720, lanes: 23, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
+</section>
+<section id="host-to-device-data-frames">
+<span id="onidatasheet-rhs2116-h2d"></span><h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Permalink to this heading">#</a></h2>
+<p>This device does not accept input frames. All write attempts will fail with an
+error.</p>
+</section>
+</section>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rhd2164.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">RHD2164</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rhs2116-trigger.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">RHS2116 Trigger</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#register-programming">Register Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managed-registers">Managed Registers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unmanaged-registers">Unmanaged Registers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#device-to-host-data-frames">Device To Host Data Frames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#host-to-device-data-frames">Host To Device Data Frames</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/open-ephys/onix-docs/edit/main/source/Hardware Guide/Datasheets/rhs2116.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Hardware Guide/Datasheets/rhs2116.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
