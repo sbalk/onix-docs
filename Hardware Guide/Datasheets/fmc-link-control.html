@@ -597,6 +597,22 @@ Does not affect port voltage.</p></td>
 <td><p>Save link voltage to non-volatile EEPROM if greater than 0. This
 voltage will be applied after POR.</p></td>
 </tr>
+<tr class="row-odd"><td><p>0x05</p></td>
+<td><p>LINKSTATE</p></td>
+<td><p>Register</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Link state (bits 31 downto 2: ignore, bit 1: pass, bit 0: lock)</p></td>
+</tr>
+<tr class="row-even"><td><p>0x06</p></td>
+<td><p>LINKOPTS</p></td>
+<td><p>R/W</p></td>
+<td><p>Immediate</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Port options. Bit 0: ‘0’ Port auto-shutdown disabled ‘1’ Port auto-shutdown enabled</p></td>
+</tr>
 </tbody>
 </table>
 </section>
