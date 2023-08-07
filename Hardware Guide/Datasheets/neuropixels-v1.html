@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,9 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Neuropixels V1 &#8212; Open Ephys ONIX  documentation</title>
+    <title>Neuropixels V1 &#8212; ONIX Docs</title>
   
   
   
@@ -19,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,15 +33,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/copyURLToClipboard.js"></script>
-    <script src="https://wavedrom.com/skins/default.js"></script>
-    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Datasheets/neuropixels-v1';</script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -199,7 +196,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/open-ephys/onix-docs" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+          <a href="https://github.com/open-ephys/onix-fmc-host" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
@@ -211,8 +208,20 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
             <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
         </li>
 </ul></div>
       
@@ -316,7 +325,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/open-ephys/onix-docs" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+          <a href="https://github.com/open-ephys/onix-fmc-host" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
@@ -328,8 +337,20 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
             <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
         </li>
 </ul></div>
         
@@ -338,23 +359,6 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
         <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
@@ -713,92 +717,8 @@ Twelve of Super Frames are required to construct a single “Ultra Frame” whic
 contains 12 samples from each the 384 AP channels and a single sample from each
 of the 384 LFP channels.</p>
 <p>Each ONIX frame is organized as follows:</p>
-
-<div style="overflow-x:auto">
-<script type="WaveDrom">
-{
-    reg: [
-      {bits: 64, name: "Acquisition Clock Counter", type: 0},
-      {bits: 32, name: "Device Address", type: 0},
-      {bits: 32, name: "Data Size", type: 0, attr: 944},
-
-      {bits: 64, name: "Hub Clock Counter", type: 3},
-
-      {bits: 32, name: "LFP Frame N", type: 4},
-
-      {bits: 32, name: "AP Frame 0", type: 6},
-      {bits: 32, name: "AP Frame 1", type: 6},
-      {bits: 32, name: "AP Frame 2", type: 6},
-      {bits: 32, name: "AP Frame 3", type: 6},
-      {bits: 32, name: "AP Frame 4", type: 6},
-      {bits: 32, name: "AP Frame 5", type: 6},
-      {bits: 32, name: "AP Frame 6", type: 6},
-      {bits: 32, name: "AP Frame 7", type: 6},
-      {bits: 32, name: "AP Frame 8", type: 6},
-      {bits: 32, name: "AP Frame 9", type: 6},
-      {bits: 32, name: "AP Frame 10", type: 6},
-      {bits: 32, name: "AP Frame 11", type: 6}
-    ],
-    config: {bits: 608, lanes: 19, vflip: true, hflip: true, fontsize: 11}
-}
-</script>
-</div>
 <p>Here, LFP and AP “Frames” are not actually 32-bits words but full, 32-ADC
 sample blocks. Each one of these blocks is organized as follows:</p>
-
-<div style="overflow-x:auto">
-<script type="WaveDrom">
-{
-    reg: [
-
-      {bits: 16, name: "Sync Type", type: 3, attr: [207, 816]},
-
-      {bits: 16, name: "ADC 00 Voltage", type: 6},
-      {bits: 16, name: "ADC 05 Voltage", type: 6},
-      {bits: 16, name: "ADC 10 Voltage", type: 6},
-      {bits: 16, name: "ADC 15 Voltage", type: 6},
-      {bits: 16, name: "ADC 20 Voltage", type: 6},
-      {bits: 16, name: "ADC 25 Voltage", type: 6},
-      {bits: 16, name: "ADC 30 Voltage", type: 6},
-
-      {bits: 16, name: "ADC 01 Voltage", type: 6},
-      {bits: 16, name: "ADC 06 Voltage", type: 6},
-      {bits: 16, name: "ADC 11 Voltage", type: 6},
-      {bits: 16, name: "ADC 16 Voltage", type: 6},
-      {bits: 16, name: "ADC 21 Voltage", type: 6},
-      {bits: 16, name: "ADC 26 Voltage", type: 6},
-      {bits: 16, name: "ADC 31 Voltage", type: 6},
-
-      {bits: 16, name: "ADC 02 Voltage", type: 6},
-      {bits: 16, name: "ADC 07 Voltage", type: 6},
-      {bits: 16, name: "ADC 12 Voltage", type: 6},
-      {bits: 16, name: "ADC 17 Voltage", type: 6},
-      {bits: 16, name: "ADC 22 Voltage", type: 6},
-      {bits: 16, name: "ADC 27 Voltage", type: 6},
-      {bits: 16, name: "Reserved", type: 0},
-
-      {bits: 16, name: "ADC 03 Voltage", type: 6},
-      {bits: 16, name: "ADC 08 Voltage", type: 6},
-      {bits: 16, name: "ADC 13 Voltage", type: 6},
-      {bits: 16, name: "ADC 18 Voltage", type: 6},
-      {bits: 16, name: "ADC 23 Voltage", type: 6},
-      {bits: 16, name: "ADC 28 Voltage", type: 6},
-      {bits: 8, name: "Reserved", type: 0},
-      {bits: 8, name: "Frame Counter MSB", type: 7},
-
-      {bits: 16, name: "ADC 04 Voltage", type: 6},
-      {bits: 16, name: "ADC 09 Voltage", type: 6},
-      {bits: 16, name: "ADC 14 Voltage", type: 6},
-      {bits: 16, name: "ADC 19 Voltage", type: 6},
-      {bits: 16, name: "ADC 24 Voltage", type: 6},
-      {bits: 16, name: "ADC 29 Voltage", type: 6},
-      {bits: 16, name: "Frame Counter LSB", type: 7}
-
-    ],
-    config: {bits: 576, lanes: 18, vflip: true, hflip: true, fontsize: 11}
-}
-</script>
-</div>
 <p>Definitions for each of these fields are as follows:</p>
 <dl class="simple">
 <dt>Sync Type</dt><dd><p>Fixed word indicating the frame type
@@ -820,19 +740,16 @@ error.</p>
 </section>
 </section>
 
-    <script type="text/javascript">
-        function init() {
-            WaveDrom.ProcessAll();
-        }
-        window.onload = init;
-    </script>
 
                 </article>
               
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ts4231-v1-array.html"
@@ -852,7 +769,10 @@ error.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -906,7 +826,7 @@ error.</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner"></div>
+            
           </footer>
         
       </main>
@@ -914,8 +834,8 @@ error.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -931,33 +851,14 @@ error.</p>
   </p>
 </div>
       
-        <div class="footer-item">
-  <p class="sphinx-version">
-    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
   
     <div class="footer-items__end">
       
-        <div class="footer-item">
-  <p class="copyright">
-    
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
-      <br/>
-    
-  </p>
-</div>
-      
-        <div class="footer-item">
-  <p class="sphinx-version">
-    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
-    <br/>
-  </p>
-</div>
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
       
     </div>
   
