@@ -28,18 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=5fb06fa6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/copyURLToClipboard.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Headstages/serialization';</script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -575,6 +577,23 @@ parallel to coaxial serializer that is typically used for streaming camera
 data. ONIX headstages use an intermediate FPGA to translate data from any
 number of heterogeneous data sources to the serializer input using the
 following simple protocol</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'pclk', wave: 'P.....|.....'},
+  {name: 'hsync', wave: '0.10..|.....', },
+  {name: 'vsync', wave: '0.....|.10..', data: ['head', 'body', 'tail', 'data']},
+  {name: 'data', wave: 'x.35..|.4x..', data: ['ID', 'frame', 'CRC', 'data']},
+],
+config: { hscale: 1},
+head: {
+    text:'DS90UB933 Serialization Protocol'
+},
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -627,6 +646,56 @@ bandwidth of the filters on the Intan chip.</p></li>
 </ol>
 <p>The <a class="reference external" href="https://github.com/open-ephys/ONI">ONI Specification</a> describes a
 register programming protocol that can be implemented using a 32-bit <a class="reference external" href="https://en.wikipedia.org/wiki/Wishbone_(computer_bus)">wishbone</a> bus:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'clk',     wave: 'p...|..'},
+  ['Host to dev.',
+    {name: 'cyc',   wave: '01..|.0'},
+    {name: 'we',    wave: 'x1..|.x'},
+    {name: 'addr',  wave: 'x=..|.x'},
+    {name: 'wval',  wave: 'x=..|.x'},
+  ],
+ ['Dev. to host',
+    {name: 'ack',  wave: '0...|10'},
+    {name: 'err',  wave: '0...|=0'},
+    {name: 'rval', wave: 'x...|..'},
+  ],
+],
+config: { hscale: 2},
+head: {
+    text:'Register write cycle',
+},
+}
+</script>
+</div>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'clk',    wave: 'p...|..'},
+  ['Host to dev.',
+    {name: 'cyc',  wave: '01..|.0'},
+    {name: 'we',   wave: 'x0..|.x'},
+    {name: 'addr', wave: 'x=..|.x'},
+    {name: 'wval', wave: 'x...|.x'},
+  ],
+ ['Dev. to host',
+    {name: 'ack',  wave: '0...|10'},
+    {name: 'err',  wave: '0...|=0'},
+    {name: 'rval', wave: 'x...|=x'},
+  ],
+],
+config: { hscale: 2},
+head: {
+    text:'Register read cycle',
+},
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -711,13 +780,75 @@ following 7-bit command words:</p>
 </tbody>
 </table>
 <p>along with a status register for reporting the validity of read and write operations:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+reg: [
+    {                       "bits": 1 },
+    { "name": "WBUSY",      "bits": 1 },
+    { "name": "WCOMPLETE",  "bits": 1 },
+    { "name": "WERROR",     "bits": 1 },
+    { "name": "RBUSY",      "bits": 1 },
+    { "name": "RCOMPLETE",  "bits": 1 },
+    { "name": "RERROR",     "bits": 1 },
+    { "name": "SEQERROR",   "bits": 1 }
+],
+config: {bits: 8, vflip: true, hflip: true},
+text:'Wishbone over backchannel status register',
+}
+</script>
+</div>
 <p>An example write sequence on this bus is given below. The wishbone bus drives
 an I2C sequence that is interpreted on the headstage and used to recreate the
 wishbone signals locally.</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'clk',    wave: 'p........................................................'},
+  ['Host to dev.',
+    {name: 'cyc',  wave: '01......................................................0', node: '.a'},
+    {name: 'we',   wave: 'x1......................................................x', node: '.b'},
+    {name: 'addr', wave: 'x=......................................................x'},
+    {name: 'wval', wave: 'x=......................................................x'},
+  ],
+
+ ['Dev. to host',
+    {name: 'ack',  wave: '0......................................................10', node: '.......................................................c'},
+    {name: 'err',  wave: '0......................................................=0', node: '.......................................................d'},
+    {name: 'rval', wave: 'x........................................................'},
+  ],
+
+
+  {name: 'sda',  wave: 'u.05.3.4.u05.3.4.u05.3.4.u05.3.4.u05.3.4.u05.3.4.05.7.x.', data:['Ser.+W', 'WE', 'Dev. Addr.',
+                                                                         'Ser.+W', 'addr [15:8]', 'addr [7:0]',
+                                                                         'Ser.+W', 'wval [31:24]', 'wval [23:16]',
+                                                                         'Ser.+W', 'wval [15:8]', 'wval [7:0]',
+                                                                         'Ser.+W', 'S0', 'reg_tx.idx',
+                                                                         'Ser.+W', 'S1', 'reg_tx.idx',
+                                                                         'Ser.+R', 'Satus'],
+   node: '..x...................................................y'},
+],
+edge: ['a~x','b~x', 'y~c', 'y~d'],
+  config: { hscale: 1},
+head: {
+    text:'Register write cycle',
+},
+}
+</script>
+</div>
 </section>
 </section>
 </section>
 
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               

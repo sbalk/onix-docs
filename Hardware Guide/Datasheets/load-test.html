@@ -28,18 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=5fb06fa6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/copyURLToClipboard.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Datasheets/load-test';</script>
     <link rel="icon" href="../../_static/favicon.png"/>
@@ -591,6 +593,29 @@ ingored.</p></td>
 <span id="onidatasheet-loadtest-d2h"></span><h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Permalink to this heading">#</a></h2>
 <p>With DT0H16_WORDS = 4, each frame transmitted to the host is structured as
 follows:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 64, name: "Acquisition Clock Counter", type: 0},
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 24},
+
+      {bits: 64, name: "Hub Clock Counter", type: 3},
+
+      {bits: 64, name: "Hub Clock Delta", type: 5},
+
+      {bits: 16, name: "Frame Word 0", type: 6, atter:42},
+      {bits: 16, name: "Frame Word 1", type: 6, atter:43},
+      {bits: 16, name: "Frame Word 2", type: 6, atter:44},
+      {bits: 16, name: "Frame Word 3", type: 6, atter:45}
+
+    ],
+    config: {bits: 320, lanes: 10, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -612,6 +637,24 @@ the number of words at the end of the frame will change.</p>
 <span id="onidatasheet-loadtest-h2d"></span><h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Permalink to this heading">#</a></h2>
 <p>With HTOD32_WORDS = 2, each frame transmitted to the host is structured as
 follows:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 16},
+
+      {bits: 64, name: "Hub Clock Counter Loopback", type: 3},
+
+      {bits: 32, name: "Frame Word 0", type: 6, atter:42},
+      {bits: 32, name: "Frame Word 1", type: 6, atter:43},
+
+    ],
+    config: {bits: 192, lanes: 6, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -628,6 +671,12 @@ Counter value to produce the Hub Clock Counter Delta field in
 </section>
 </section>
 
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               

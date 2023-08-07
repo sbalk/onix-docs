@@ -28,18 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=5fb06fa6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/copyURLToClipboard.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Datasheets/rhd2164';</script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -751,6 +753,93 @@ rate which may be hard-coded. See hub documentation for details.</p>
 <span id="onidatasheet-rhd2164-d2h"></span><h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Permalink to this heading">#</a></h2>
 <p>Each frame transmitted to the host consists of a 64 ephys + 3 auxiliary channel
 round robbin sample:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 64, name: "Acquisition Clock Counter", type: 0},
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 142},
+
+      {bits: 64, name: "Hub Clock Counter", type: 3},
+
+      {bits: 16, name: "Channel 00 Voltage", type: 4},
+      {bits: 16, name: "Channel 32 Voltage", type: 4},
+      {bits: 16, name: "Channel 01 Voltage", type: 4},
+      {bits: 16, name: "Channel 33 Voltage", type: 4},
+      {bits: 16, name: "Channel 02 Voltage", type: 4},
+      {bits: 16, name: "Channel 34 Voltage", type: 4},
+      {bits: 16, name: "Channel 03 Voltage", type: 4},
+      {bits: 16, name: "Channel 35 Voltage", type: 4},
+      {bits: 16, name: "Channel 04 Voltage", type: 4},
+      {bits: 16, name: "Channel 36 Voltage", type: 4},
+      {bits: 16, name: "Channel 05 Voltage", type: 4},
+      {bits: 16, name: "Channel 37 Voltage", type: 4},
+      {bits: 16, name: "Channel 06 Voltage", type: 4},
+      {bits: 16, name: "Channel 38 Voltage", type: 4},
+      {bits: 16, name: "Channel 07 Voltage", type: 4},
+      {bits: 16, name: "Channel 39 Voltage", type: 4},
+      {bits: 16, name: "Channel 08 Voltage", type: 4},
+      {bits: 16, name: "Channel 40 Voltage", type: 4},
+      {bits: 16, name: "Channel 09 Voltage", type: 4},
+      {bits: 16, name: "Channel 41 Voltage", type: 4},
+      {bits: 16, name: "Channel 10 Voltage", type: 4},
+      {bits: 16, name: "Channel 42 Voltage", type: 4},
+      {bits: 16, name: "Channel 11 Voltage", type: 4},
+      {bits: 16, name: "Channel 43 Voltage", type: 4},
+      {bits: 16, name: "Channel 12 Voltage", type: 4},
+      {bits: 16, name: "Channel 44 Voltage", type: 4},
+      {bits: 16, name: "Channel 13 Voltage", type: 4},
+      {bits: 16, name: "Channel 45 Voltage", type: 4},
+      {bits: 16, name: "Channel 14 Voltage", type: 4},
+      {bits: 16, name: "Channel 46 Voltage", type: 4},
+      {bits: 16, name: "Channel 15 Voltage", type: 4},
+      {bits: 16, name: "Channel 47 Voltage", type: 4},
+      {bits: 16, name: "Channel 16 Voltage", type: 4},
+      {bits: 16, name: "Channel 48 Voltage", type: 4},
+      {bits: 16, name: "Channel 17 Voltage", type: 4},
+      {bits: 16, name: "Channel 49 Voltage", type: 4},
+      {bits: 16, name: "Channel 18 Voltage", type: 4},
+      {bits: 16, name: "Channel 50 Voltage", type: 4},
+      {bits: 16, name: "Channel 19 Voltage", type: 4},
+      {bits: 16, name: "Channel 51 Voltage", type: 4},
+      {bits: 16, name: "Channel 20 Voltage", type: 4},
+      {bits: 16, name: "Channel 52 Voltage", type: 4},
+      {bits: 16, name: "Channel 21 Voltage", type: 4},
+      {bits: 16, name: "Channel 53 Voltage", type: 4},
+      {bits: 16, name: "Channel 22 Voltage", type: 4},
+      {bits: 16, name: "Channel 54 Voltage", type: 4},
+      {bits: 16, name: "Channel 23 Voltage", type: 4},
+      {bits: 16, name: "Channel 55 Voltage", type: 4},
+      {bits: 16, name: "Channel 24 Voltage", type: 4},
+      {bits: 16, name: "Channel 56 Voltage", type: 4},
+      {bits: 16, name: "Channel 25 Voltage", type: 4},
+      {bits: 16, name: "Channel 57 Voltage", type: 4},
+      {bits: 16, name: "Channel 26 Voltage", type: 4},
+      {bits: 16, name: "Channel 58 Voltage", type: 4},
+      {bits: 16, name: "Channel 27 Voltage", type: 4},
+      {bits: 16, name: "Channel 59 Voltage", type: 4},
+      {bits: 16, name: "Channel 28 Voltage", type: 4},
+      {bits: 16, name: "Channel 60 Voltage", type: 4},
+      {bits: 16, name: "Channel 29 Voltage", type: 4},
+      {bits: 16, name: "Channel 61 Voltage", type: 4},
+      {bits: 16, name: "Channel 30 Voltage", type: 4},
+      {bits: 16, name: "Channel 62 Voltage", type: 4},
+      {bits: 16, name: "Channel 31 Voltage", type: 4},
+      {bits: 16, name: "Channel 63 Voltage", type: 4},
+
+      {bits: 16, name: "Aux Channel 0 Voltage", type: 6},
+      {bits: 16, name: "Aux Channel 1 Voltage", type: 6},
+      {bits: 16, name: "Aux Channel 2 Voltage", type: 6},
+
+      {bits: 16}
+
+    ],
+    config: {bits: 1280, lanes: 40, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <p>All voltages are unsigned, 16-bit integers.</p>
 </section>
 <section id="host-to-device-data-frames">
@@ -760,6 +849,12 @@ error.</p>
 </section>
 </section>
 
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               

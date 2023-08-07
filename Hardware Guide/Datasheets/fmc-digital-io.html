@@ -28,18 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=5fb06fa6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/copyURLToClipboard.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Hardware Guide/Datasheets/fmc-digital-io';</script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -520,6 +522,26 @@ serialization protocol.</p>
 <section id="breakout-to-host-serialization">
 <h3>Breakout to Host Serialization<a class="headerlink" href="#breakout-to-host-serialization" title="Permalink to this heading">#</a></h3>
 <p>The breakout to host serialization protocol is as follows:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'clk',  wave: 'p............'},
+  ['Physical Bus',
+    {name: 'sclk', wave: '01....0....1.'},
+    {name: 'dat0', wave: '6xx3.....6.xx', data:['P10', 'Buttons','P10']},
+    {name: 'dat1', wave: '67.......6.7.', data:['P32', 'Digital In','P32']},
+  ],
+],
+config: { hscale: 1},
+head: {
+    text:'Breakout to Host Serialization Protocol',
+    tick:0,
+},
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -554,6 +576,25 @@ the four headstage ports.</p>
 <section id="host-to-breakout-serialization">
 <h3>Host to Breakout Serialization<a class="headerlink" href="#host-to-breakout-serialization" title="Permalink to this heading">#</a></h3>
 <p>The host to breakout serialization protocol is as follows:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+signal: [
+  {name: 'clk',  wave: 'p..............'},
+  ['Physical Bus',
+    {name: 'sclk', wave: '01.....0.....1.'},
+    {name: 'dat0', wave: '73.6.7.......3.', data:['', 'CMD','SW','Digital Out']},
+  ],
+],
+config: { hscale: 1},
+head: {
+    text:'Host to Breakout Serialization Protocol',
+    tick:0,
+},
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -574,6 +615,28 @@ to control the display state and non-timing critical apsects of the
 breakout board. For instance, LED colors and brightness, headstage lock
 state, etc. As of this writing, for <a class="reference internal" href="../Breakout%20Board/index.html#breakout"><span class="std std-ref">Breakout Board</span></a>, a complete
 slow-word is as follows.</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 1, name: "Acq. Running" },
+      {bits: 1, name: "Acq. Reset Done" },
+      {bits: 2, name: "Reserved" },
+      {bits: 4, name: "LED Level" },
+      {bits: 2, name: "LED Mode" },
+      {bits: 2, name: "Port A Status" },
+      {bits: 2, name: "Port B Status" },
+      {bits: 2, name: "Port C Status" },
+      {bits: 2, name: "Port D Status" },
+      {bits: 12, name: "Analog IO Dir." },
+      {bits: 2, name: "HARP Conf." },
+      {bits: 16, name: "GPIO Dir." }
+    ],
+    config: {bits: 48, lanes: 8, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <p>which are defined as follows:</p>
 <blockquote>
 <div><ul class="simple">
@@ -687,6 +750,27 @@ current digital input and user input state.</p>
 <p>Input frames are only transmitted if there is a change in digital input or
 user input state.</p>
 </div>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 64, name: "Acquisition Clock Counter", type: 0},
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 12},
+
+      {bits: 64, name: "Hub Clock Counter", type: 3},
+
+      {bits: 8},
+      {bits: 8, name: "Input Port State", type: 4},
+      {bits: 6},
+      {bits: 4, name: "Link State", type: 6},
+      {bits: 6, name: "Button State", type: 5},
+    ],
+    config: {bits: 224, lanes: 7, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -703,6 +787,21 @@ user input state.</p>
 <span id="onidatasheet-fmc-digital-io-h2d"></span><h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Permalink to this heading">#</a></h2>
 <p>Each frame sent to the device contains an 8-bit word specifying the digital
 output port state:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{
+    reg: [
+      {bits: 32, name: "Device Address", type: 0},
+      {bits: 32, name: "Data Size", type: 0, attr: 4},
+
+      {bits: 24},
+      {bits: 8, name: "Output Port State", type: 4},
+    ],
+    config: {bits: 96, lanes: 3, vflip: true, hflip: true, fontsize: 11}
+}
+</script>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -715,6 +814,12 @@ output port state:</p>
 </section>
 </section>
 
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
 
                 </article>
               
