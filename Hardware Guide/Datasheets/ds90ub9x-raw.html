@@ -552,7 +552,9 @@ Miniscope</a> and its derivatives.</p>
 <td><p>On Reset</p></td>
 <td><p>1280</p></td>
 <td><p>None</p></td>
-<td><p>Frame data size in samples</p></td>
+<td><p>Frame size register
+* Bits(15:0): In parallel mode: frame data size in samples. In serial mode: Number of words per frame in each line (total frame size= this x num streams x num lines per stream).
+* Bit(31:15); number of frames to aggregate. 0 = do not perform aggregation</p></td>
 </tr>
 <tr class="row-even"><td><p>0x8002</p></td>
 <td><p>TRIGGER</p></td>
@@ -607,7 +609,7 @@ bit 14 is VSYNC.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>0x8006</p></td>
-<td><p>SYNCBITS</p></td>
+<td><p>MARK</p></td>
 <td><p>R/W</p></td>
 <td><p>On Reset</p></td>
 <td><p>0</p></td>
@@ -620,10 +622,75 @@ frame in a multi-frame sample (e.g. the first row in a camera image).</p>
 <li><p>Bit 0: not included</p></li>
 <li><p>Bit 1: ‘0’ = HSYNC, ‘1’ = VSYNC</p></li>
 <li><p>Bit 2: ‘0’ = Rising edge, ‘1’ = Falling edge</p></li>
+<li><p>Bit 3: If ‘1’, when aggregate, use mark settings to select the first frame</p></li>
 </ul>
 </td>
 </tr>
 <tr class="row-odd"><td><p>0x8007</p></td>
+<td><p>MAGIC_MASK</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Controls Magic word detection and its masking</p>
+<ul class="simple">
+<li><p>Bits 15-0: Bitmask for magic word detection. If all 0, magic word detection is disabled.</p></li>
+<li><p>Bit 31: also check inverse mask.</p></li>
+<li><p>Bit 30: When aggregate, wait for the first non-inverted magic word</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>0x8008</p></td>
+<td><p>MAGIC</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>16 bit magic word. After trigger, if magic_mask is not 0, wait for this word in the stream before starting a frame</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x8009</p></td>
+<td><p>MAGIC_WAIT</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Max number of samples to wait from trigger to magic word detection before canceling and going back to trigger detection. 0 means wait indefinitely</p></td>
+</tr>
+<tr class="row-even"><td><p>0x800A</p></td>
+<td><p>DATAMODE</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Parallel/Serial data mode selection and options</p>
+<ul class="simple">
+<li><p>Bit 0: ‘0’ = Normal parallel mode. ‘1’ = Serial mode</p></li>
+<li><p>Bit 1: ‘1’ = Include “index” field in normal mode, ‘0’= Do not include it in normal mode</p></li>
+<li><p>Bit 2: Number of serial streams ‘0’ = 1 stream, ‘1’ = 2 streams</p></li>
+<li><p>Bit 3: reserved</p></li>
+<li><p>Bits 7-4: Number of bits per word - 1 (i.e.: ‘0x0’ = 1bit, ‘0xF’ = 16bits)</p></li>
+<li><p>Bits 9-8 number of lines per stream ‘00’ = 1, ‘01’ = 2. ‘10’ = 4, ‘11’ = 8</p></li>
+<li><p>Bit 10: data order in serial mode ‘0’ = MSB first, ‘1’ = LSB first</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>0x800B</p></td>
+<td><p>DATALINES0</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Input lines for stream 0. Each 4 bits specify the input: 0x0-0xB: Data lines 0-11. 0xC: Hsync, 0xD: Vsync, 0xE: Reserved 0xF: zero-input</p></td>
+</tr>
+<tr class="row-even"><td><p>0x800C</p></td>
+<td><p>DATALINES1</p></td>
+<td><p>R/W</p></td>
+<td><p>On Reset</p></td>
+<td><p>0</p></td>
+<td><p>None</p></td>
+<td><p>Input lines for stream 1. Each 4 bits specify the input: 0x0-0xB: Data lines 0-11. 0xC: Hsync, 0xD: Vsync, 0xE: Reserved 0xF: zero-input</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x8010</p></td>
 <td><p>GPIO_DIR</p></td>
 <td><p>R/W</p></td>
 <td><p>On Reset</p></td>
@@ -636,7 +703,7 @@ frame in a multi-frame sample (e.g. the first row in a camera image).</p>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>0x8008</p></td>
+<tr class="row-even"><td><p>0x8011</p></td>
 <td><p>GPIO_VAL</p></td>
 <td><p>R/W</p></td>
 <td><p>On Reset</p></td>
@@ -649,7 +716,7 @@ frame in a multi-frame sample (e.g. the first row in a camera image).</p>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>0x8009</p></td>
+<tr class="row-odd"><td><p>0x8012</p></td>
 <td><p>GPIO_VAL</p></td>
 <td><p>R</p></td>
 <td><p>On DS90UBX LOCK or PASS pin state change</p></td>
