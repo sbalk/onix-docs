@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,7 +489,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="coaxial-data-serialization-power">
-<span id="serialization"></span><h1>Coaxial Data Serialization &amp; Power<a class="headerlink" href="#coaxial-data-serialization-power" title="Permalink to this heading">#</a></h1>
+<span id="serialization"></span><h1>Coaxial Data Serialization &amp; Power<a class="headerlink" href="#coaxial-data-serialization-power" title="Link to this heading">#</a></h1>
 <p>The major advantage of ONI-compliant headstages is that they contain onboard
 logic for controlling and streaming from arbitrary configurations of head-borne
 devices using a unified, bidirectional data stream. In this way, data can be
@@ -513,7 +514,7 @@ headstage tethers</p>
 </div>
 <p>ONIX headstages use an FPGA to control peripheral devices and combine their
 data streams prior to serialization. For instance, <a class="reference internal" href="headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> and
-<a class="reference internal" href="headstage-neuropix.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0 Headstage</span></a> use an <a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga/max-10.html">Intel MAX10 FPGA</a>.
+<a class="reference internal" href="headstage-neuropix-1e.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> use an <a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga/max-10.html">Intel MAX10 FPGA</a>.
 The exact FPGA is not important because every ONI-compliant headstage is uses
 very similar gateware (FPGA-based firmware) that performs three major functions</p>
 <ol class="arabic simple">
@@ -526,7 +527,7 @@ each of the device data streams to the serializer.</p></li>
 configuration and control of the devices on the headstage.</p></li>
 </ol>
 <section id="power">
-<h2>Power<a class="headerlink" href="#power" title="Permalink to this heading">#</a></h2>
+<h2>Power<a class="headerlink" href="#power" title="Link to this heading">#</a></h2>
 <p>As mentioned in the previous section, power is DC-coupled into the coaxial link
 at the host and recovered at the headstage via a second, inductive DC path.
 This “T-network” provides a low impedance path for the DC portion of the signal
@@ -535,7 +536,7 @@ communication between the SERDES pair.</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/rf-t.png" src="../../_images/rf-t.png" />
 <figcaption>
-<p><span class="caption-text">LC-network for combining power and data on the coaxial cable.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">LC-network for combining power and data on the coaxial cable.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Its important to note that this circuit is completely passive. Therefore
@@ -560,18 +561,18 @@ host boards have this ability (e.g. see <a class="reference internal" href="../P
 </div>
 </section>
 <section id="ds90ub933-4-communication-protocols">
-<h2>DS90UB933/4 Communication Protocols<a class="headerlink" href="#ds90ub933-4-communication-protocols" title="Permalink to this heading">#</a></h2>
+<h2>DS90UB933/4 Communication Protocols<a class="headerlink" href="#ds90ub933-4-communication-protocols" title="Link to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://www.ti.com/product/DS90UB933-Q1">DS90UB933</a>/<a class="reference external" href="https://www.ti.com/product/DS90UB934-Q1">DS90UB934</a> are a coaxial SERDES pair used on
 several ONIX headstages and host modules:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> (DS90UB933 Serializer)</p></li>
-<li><p><a class="reference internal" href="headstage-neuropix.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0 Headstage</span></a> (DS90UB933 Serilizer)</p></li>
+<li><p><a class="reference internal" href="headstage-neuropix-1e.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> (DS90UB933 Serilizer)</p></li>
 <li><p><a class="reference internal" href="../PCIe%20Host/index.html#pcie-host"><span class="std std-ref">PCIe Host</span></a> (DS90UB934 Deserilizer)</p></li>
 </ul>
 <p>along with the UCLA Miniscope and its derivatives. This section describes how this
 SERDES pair is used for control of and communication with headstages.</p>
 <section id="data-serialization">
-<h3>Data Serialization<a class="headerlink" href="#data-serialization" title="Permalink to this heading">#</a></h3>
+<h3>Data Serialization<a class="headerlink" href="#data-serialization" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://www.ti.com/product/DS90UB933-Q1">DS90UB933</a> is a 100 MHz
 parallel to coaxial serializer that is typically used for streaming camera
 data. ONIX headstages use an intermediate FPGA to translate data from any
@@ -635,7 +636,7 @@ a low speed bidirectional link for sending triggers and configuration to the
 headstage.</p>
 </section>
 <section id="register-configuration">
-<h3>Register Configuration<a class="headerlink" href="#register-configuration" title="Permalink to this heading">#</a></h3>
+<h3>Register Configuration<a class="headerlink" href="#register-configuration" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://www.ti.com/product/DS90UB933-Q1">DS90UB933</a>/<a class="reference external" href="https://www.ti.com/product/DS90UB934-Q1">DS90UB934</a> SERDES pair have a I2C-based
 backchannel for bidirectional communication. This channel is used for two
 purposes in ONIX hardware.</p>
@@ -952,7 +953,7 @@ head: {
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

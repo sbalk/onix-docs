@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,7 +489,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="overview">
-<span id="pcie-host-overview"></span><h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
+<span id="pcie-host-overview"></span><h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h1>
 <p>The <strong>ONIX PCIe Host</strong> combines the <a class="reference external" href="https://github.com/open-ephys/onix-fmc-host">ONIX FMC Host Module</a> and the PCIe-connectivity
 provided by the <a class="reference external" href="https://numato.com/product/nereid-kintex-7-pci-express-fpga-development-board/">Numato Nereid</a>
 carrier board.</p>
@@ -510,7 +511,7 @@ and IO</p></li>
 typically &lt; 100 µs)</p></li>
 </ul>
 <section id="host-module">
-<h2>Host Module<a class="headerlink" href="#host-module" title="Permalink to this heading">#</a></h2>
+<h2>Host Module<a class="headerlink" href="#host-module" title="Link to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://github.com/open-ephys/onix-fmc-host">ONIX FMC Host</a> module
 provides a host interface for serialized headstages and miniscopes, as well as
 general purpose analog and digital IO. It is a VITA-57.1 compliant mezzanine
@@ -519,7 +520,7 @@ board , it provides host PC communication.</p>
 <figure class="align-center" id="id1">
 <img alt="../../_images/todo.jpg" src="../../_images/todo.jpg" />
 <figcaption>
-<p><span class="caption-text">The ONIX FMC Host module.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The ONIX FMC Host module.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -536,7 +537,7 @@ controllable over the FMC connector.</p></li>
 </ul>
 </section>
 <section id="numato-nereid">
-<h2>Numato Nereid<a class="headerlink" href="#numato-nereid" title="Permalink to this heading">#</a></h2>
+<h2>Numato Nereid<a class="headerlink" href="#numato-nereid" title="Link to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://numato.com/product/nereid-kintex-7-pci-express-fpga-development-board/">Numato Nereid</a>
 is a VITA-57 compliant high-density FMC carrier module, which is compatible
 with the ONIX FMC Host Board. It has a Kintex-7 FPGA, PCIe bus (Gen2 4x), and 4
@@ -545,12 +546,12 @@ when its not needed for maximum close-loop performance.</p>
 <figure class="align-center" id="id2">
 <img alt="../../_images/nereid-callouts.png" src="../../_images/nereid-callouts.png" />
 <figcaption>
-<p><span class="caption-text">The Numato Nereid Kintex-7 PCIe/FMC carrier module (<a class="reference external" href="https://numato.com/product/nereid-kintex-7-pci-express-fpga-development-board/">image source</a>).</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The Numato Nereid Kintex-7 PCIe/FMC carrier module (<a class="reference external" href="https://numato.com/product/nereid-kintex-7-pci-express-fpga-development-board/">image source</a>).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="pcie-stack">
-<h2>PCIe Stack<a class="headerlink" href="#pcie-stack" title="Permalink to this heading">#</a></h2>
+<h2>PCIe Stack<a class="headerlink" href="#pcie-stack" title="Link to this heading">#</a></h2>
 <p>We are using a slightly modified <a class="reference external" href="https://github.com/aacuevas/riffa">version</a> of the excellent, open-source <a class="reference external" href="https://github.com/KastnerRG/riffa">RIFFA</a> project to orchestrate data
 transmission over the PCIe bus. The PCIe protocol implementation and physical
 interface is provided by a <a class="reference external" href="https://www.xilinx.com/products/intellectual-property/7_series_pci_express_block.html">hard block</a>
@@ -699,7 +700,7 @@ in the Kintex-7 FPGA.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

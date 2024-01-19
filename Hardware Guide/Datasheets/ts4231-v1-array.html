@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,7 +489,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="ts4231-array-for-vive-v1-base-stations">
-<span id="onidatasheet-ts4231-v1-array"></span><h1>TS4231 Array for Vive V1 Base Stations<a class="headerlink" href="#ts4231-array-for-vive-v1-base-stations" title="Permalink to this heading">#</a></h1>
+<span id="onidatasheet-ts4231-v1-array"></span><h1>TS4231 Array for Vive V1 Base Stations<a class="headerlink" href="#ts4231-array-for-vive-v1-base-stations" title="Link to this heading">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Jonathan P. Newman</p>
@@ -503,11 +504,11 @@ document.write(`
 <dd class="field-even"><p>25</p>
 </dd>
 <dt class="field-odd">ONIX Hubs<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="../Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a>, <a class="reference internal" href="../Headstages/headstage-neuropix.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0 Headstage</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a>, <a class="reference internal" href="../Headstages/headstage-neuropix-1e.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a></p>
 </dd>
 </dl>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
 <p>The <strong>TS4231 Array for V1 Base Stations</strong>  ONIX device is a localization unit
 that provides 3D position information. At is core, this device comprises an
 array of optical to digital converters that work with both V1 and V2 (“Index”)
@@ -520,7 +521,7 @@ and optical signal. The host computer must perform the mathematics in order to
 calculate positional information using these data.</p>
 </section>
 <section id="register-programming">
-<span id="onidatasheet-ts4231-v1-array-reg"></span><h2>Register Programming<a class="headerlink" href="#register-programming" title="Permalink to this heading">#</a></h2>
+<span id="onidatasheet-ts4231-v1-array-reg"></span><h2>Register Programming<a class="headerlink" href="#register-programming" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Address</p></th>
@@ -550,7 +551,7 @@ calculate positional information using these data.</p>
 </table>
 </section>
 <section id="device-to-host-data-frames">
-<span id="onidatasheet-ts4231-v1-array-d2h"></span><h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Permalink to this heading">#</a></h2>
+<span id="onidatasheet-ts4231-v1-array-d2h"></span><h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Link to this heading">#</a></h2>
 <p>Each frame transmitted to the host is structured as follows:</p>
 
 <div style="overflow-x:auto">
@@ -580,7 +581,7 @@ photodiode</p>
 <img alt="../../_images/ts4231-v1-waveforms.png" src="../../_images/ts4231-v1-waveforms.png" />
 <figcaption>
 <p><span class="caption-text">Optical waveforms detected by the photodiode and the envelope output used
-for sweep classification.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+for sweep classification.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Envelope codes are defined based on their width as follows:</p>
@@ -612,7 +613,7 @@ the <a class="reference external" href="https://github.com/nairol/LighthouseRedo
 for more information.</p>
 </section>
 <section id="host-to-device-data-frames">
-<h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Permalink to this heading">#</a></h2>
+<h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Link to this heading">#</a></h2>
 <p>This device does not accept input frames. All write attempts will fail with an
 error.</p>
 </section>
@@ -725,7 +726,7 @@ error.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -485,12 +486,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="connections-and-cables">
-<span id="connection-overview"></span><h1>Connections and Cables<a class="headerlink" href="#connections-and-cables" title="Permalink to this heading">#</a></h1>
+<span id="connection-overview"></span><h1>Connections and Cables<a class="headerlink" href="#connections-and-cables" title="Link to this heading">#</a></h1>
 <img alt="../../_images/connections.png" class="align-center" src="../../_images/connections.png" />
 <section id="connection-types">
-<h2>Connection types<a class="headerlink" href="#connection-types" title="Permalink to this heading">#</a></h2>
+<h2>Connection types<a class="headerlink" href="#connection-types" title="Link to this heading">#</a></h2>
 <section id="headstage-link">
-<span id="id1"></span><h3>Headstage Link<a class="headerlink" href="#headstage-link" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3>Headstage Link<a class="headerlink" href="#headstage-link" title="Link to this heading">#</a></h3>
 <p>The headstage link allows fast data communication between an ONI compliant headstage and the PCIe host board. This connection is formed by a single coaxial cable for each attached headstage (or other ONI compliant hub, such as a UCLA Miniscope V4). This connection also provides power to the headstage from the PCIe host board.</p>
 <p>The headstage link can be formed directly between the host PCIe board and a headstage. Alternatively, a headstage link can include an active commutator and/or breakout board between the PCIe board and headstage.</p>
 <a class="reference internal image-reference" href="../../_images/headstage.png"><img alt="../../_images/headstage.png" class="align-center" src="../../_images/headstage.png" style="width: 70%;" /></a>
@@ -500,11 +501,11 @@ document.write(`
 <li><p>PCIe host board: MMCX connectors</p></li>
 <li><p>Breakout board: MMCX connectors (to link to PCIe host) &amp; SMA connectors (to link to commutator or headstage).</p></li>
 <li><p>Commutator: SMA connectors to link to both breakout board and headstage.</p></li>
-<li><p>The <a class="reference internal" href="../Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> &amp; <a class="reference internal" href="../Headstages/headstage-neuropix.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0 Headstage</span></a>:  Hirose X.FL-PR-SMT1-2(80) X.FL coaxial socket connector.</p></li>
+<li><p>The <a class="reference internal" href="../Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> &amp; <a class="reference internal" href="../Headstages/headstage-neuropix-1e.html#headstage-neuropix1"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a>:  Hirose X.FL-PR-SMT1-2(80) X.FL coaxial socket connector.</p></li>
 </ul>
 </section>
 <section id="digital-and-analog-i-o">
-<h3>Digital and Analog I/O<a class="headerlink" href="#digital-and-analog-i-o" title="Permalink to this heading">#</a></h3>
+<h3>Digital and Analog I/O<a class="headerlink" href="#digital-and-analog-i-o" title="Link to this heading">#</a></h3>
 <a class="reference internal image-reference" href="../../_images/IO.png"><img alt="../../_images/IO.png" class="align-center" src="../../_images/IO.png" style="width: 70%;" /></a>
 <ul class="simple">
 <li><p><a class="reference external" href="https://multimedia.3m.com/mws/media/585365O/3mtm-shrunk-delta-ribbon-sdr-cable-assembly-ts2287.pdf">High speed digital cable</a>
@@ -512,7 +513,7 @@ to connect Host and Breakout Board.</p></li>
 </ul>
 </section>
 <section id="lighthouses">
-<h3>Lighthouses<a class="headerlink" href="#lighthouses" title="Permalink to this heading">#</a></h3>
+<h3>Lighthouses<a class="headerlink" href="#lighthouses" title="Link to this heading">#</a></h3>
 <a class="reference internal image-reference" href="../../_images/lighthouse.png"><img alt="../../_images/lighthouse.png" class="align-center" src="../../_images/lighthouse.png" style="width: 70%;" /></a>
 <ul class="simple">
 <li><p>Audio (Lighthouse A) to Audio (Lighthouse B) - to synchronise lighthouses
@@ -521,7 +522,7 @@ to connect Host and Breakout Board.</p></li>
 </ul>
 </section>
 <section id="commutator-link">
-<h3>Commutator link<a class="headerlink" href="#commutator-link" title="Permalink to this heading">#</a></h3>
+<h3>Commutator link<a class="headerlink" href="#commutator-link" title="Link to this heading">#</a></h3>
 <a class="reference internal image-reference" href="../../_images/commutator.png"><img alt="../../_images/commutator.png" class="align-center" src="../../_images/commutator.png" style="width: 70%;" /></a>
 <ul class="simple">
 <li><p>Computer (USB) to commutator (micro-USB) cable, to power the commutator &amp;
@@ -530,7 +531,7 @@ provide orientation data.</p></li>
 </section>
 </section>
 <section id="cable-list">
-<span id="id2"></span><h2>Cable List<a class="headerlink" href="#cable-list" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2>Cable List<a class="headerlink" href="#cable-list" title="Link to this heading">#</a></h2>
 <div class="row">
   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 d-flex">
   <div class="gallery-card">
@@ -596,7 +597,7 @@ provide orientation data.</p></li>
       </div>
     </div>
   </div><section id="connecting-mmcx">
-<span id="mmcx-cable"></span><h3>Connecting MMCX<a class="headerlink" href="#connecting-mmcx" title="Permalink to this heading">#</a></h3>
+<span id="mmcx-cable"></span><h3>Connecting MMCX<a class="headerlink" href="#connecting-mmcx" title="Link to this heading">#</a></h3>
 <p>The MMCX connectors at the end of these cables can easily break off if used incorrectly. When connecting or disconnecting, hold the connector itself instead of pulling at the cabling.</p>
 <details open><summary> View how to connect and disconnect MMCX:
 </summary>
@@ -730,7 +731,7 @@ provide orientation data.</p></li>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

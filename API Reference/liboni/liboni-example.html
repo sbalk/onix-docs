@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -456,7 +456,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="examples">
-<span id="liboni-example"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
+<span id="liboni-example"></span><h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
 <p>The following examples demonstrate common uses of <code class="docutils literal notranslate"><span class="pre">liboni</span></code>. They generally
 omit checking return codes, which should be done when the library is used in
 for real world applications. For instance:</p>
@@ -465,7 +465,7 @@ for real world applications. For instance:</p>
 </pre></div>
 </div>
 <section id="acquisition-context-creation">
-<span id="liboni-example-ctx-creation"></span><h2>Acquisition Context Creation<a class="headerlink" href="#acquisition-context-creation" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-ctx-creation"></span><h2>Acquisition Context Creation<a class="headerlink" href="#acquisition-context-creation" title="Link to this heading">#</a></h2>
 <p>Every piece of ONI-complaint host hardware (occupying a single PCIe slot, USB
 port, etc) is governed by an acquisition context. Contexts are fully described
 by two parameters: a string specifying the hardware driver and an integer
@@ -513,7 +513,7 @@ done via</p>
 </div>
 </section>
 <section id="closing-an-acquisition-context">
-<span id="liboni-example-ctx-destruction"></span><h2>Closing an Acquisition Context<a class="headerlink" href="#closing-an-acquisition-context" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-ctx-destruction"></span><h2>Closing an Acquisition Context<a class="headerlink" href="#closing-an-acquisition-context" title="Link to this heading">#</a></h2>
 <p>When an acquisition context is no longer needed, it must be disposed to prevent
 memory leaks. This is accomplished via</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">oni_destroy_ctx</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
@@ -523,7 +523,7 @@ memory leaks. This is accomplished via</p>
 close system-level descriptors providing links to hardware.</p>
 </section>
 <section id="examining-the-device-table">
-<span id="liboni-example-device-table"></span><h2>Examining the Device Table<a class="headerlink" href="#examining-the-device-table" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-device-table"></span><h2>Examining the Device Table<a class="headerlink" href="#examining-the-device-table" title="Link to this heading">#</a></h2>
 <p>Following context initialization or reset, it is useful to examine the device
 table to see the devices that host has access to. To examine the device table,
 we query the context for the number of devices in the table, allocate enough
@@ -557,7 +557,7 @@ some bit ranges are used to specifiy the hub address.</p>
 </div>
 </section>
 <section id="reading-and-writing-device-registers">
-<span id="liboni-example-read-write-reg"></span><h2>Reading and Writing Device Registers<a class="headerlink" href="#reading-and-writing-device-registers" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-read-write-reg"></span><h2>Reading and Writing Device Registers<a class="headerlink" href="#reading-and-writing-device-registers" title="Link to this heading">#</a></h2>
 <p>It is often necessary to inspect and configure devices prior to or during
 acquisition. As described in the ONI specification, a device is a leaf element
 in the device table with <em>at least</em> the following properties:</p>
@@ -587,7 +587,7 @@ This function will return an error if the context is in an inappropriate state,
 the device does not exist in the device table, or the register is read-only.</p>
 </section>
 <section id="setting-read-and-write-buffer-sizes">
-<span id="liboni-example-set-buffers"></span><h2>Setting Read and Write Buffer Sizes<a class="headerlink" href="#setting-read-and-write-buffer-sizes" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-set-buffers"></span><h2>Setting Read and Write Buffer Sizes<a class="headerlink" href="#setting-read-and-write-buffer-sizes" title="Link to this heading">#</a></h2>
 <p>After context initialization, the internal read and write buffers can be
 manually specified. These buffers exist in order to reduce copying.</p>
 <ul class="simple">
@@ -639,7 +639,7 @@ sizes, use <code class="docutils literal notranslate"><span class="pre">oni_get_
 </div>
 </section>
 <section id="starting-acquisition">
-<span id="start-ctx"></span><h2>Starting Acquisition<a class="headerlink" href="#starting-acquisition" title="Permalink to this heading">#</a></h2>
+<span id="start-ctx"></span><h2>Starting Acquisition<a class="headerlink" href="#starting-acquisition" title="Link to this heading">#</a></h2>
 <p>Prior to reading and writing to/from the high bandwidth data streams,
 acquisition must be started. To do this, write 1 to the <code class="docutils literal notranslate"><span class="pre">ONI_OPT_RUNNING</span></code>
 context option:</p>
@@ -672,7 +672,7 @@ write 2 to the <code class="docutils literal notranslate"><span class="pre">ONI_
 <code class="docutils literal notranslate"><span class="pre">ONI_OPT_RUNNING</span></code> to 1).</p>
 </section>
 <section id="reading-data-frames">
-<span id="liboni-example-read-frame"></span><h2>Reading Data Frames<a class="headerlink" href="#reading-data-frames" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-read-frame"></span><h2>Reading Data Frames<a class="headerlink" href="#reading-data-frames" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="oni.html#c.oni_frame_t" title="oni_frame_t"><code class="xref c c-struct docutils literal notranslate"><span class="pre">oni_frame_t</span></code></a>’s are minimal packets containing metadata and raw binary
 data blocks from a single device within the device table. A
 <a class="reference internal" href="onidefs.html#c.oni_size_t" title="oni_size_t"><code class="xref c c-struct docutils literal notranslate"><span class="pre">oni_size_t</span></code></a> is defined as</p>
@@ -719,7 +719,7 @@ frequently enough such that hardware buffers do not overflow.</p>
 </div>
 </section>
 <section id="writing-data-frames">
-<span id="liboni-example-write-frame"></span><h2>Writing Data Frames<a class="headerlink" href="#writing-data-frames" title="Permalink to this heading">#</a></h2>
+<span id="liboni-example-write-frame"></span><h2>Writing Data Frames<a class="headerlink" href="#writing-data-frames" title="Link to this heading">#</a></h2>
 <p>Writing frames to an appropriate device in the device table follows similar
 steps to reading frames.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Required elements to create frame</span>
@@ -793,7 +793,7 @@ change in the data field in between writes:</p>
 </div>
 </section>
 <section id="synchronizing-contexts">
-<span id="sync-ctx"></span><h2>Synchronizing Contexts<a class="headerlink" href="#synchronizing-contexts" title="Permalink to this heading">#</a></h2>
+<span id="sync-ctx"></span><h2>Synchronizing Contexts<a class="headerlink" href="#synchronizing-contexts" title="Link to this heading">#</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Document.</p>
@@ -913,7 +913,7 @@ change in the data field in between writes:</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,9 +489,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="setup-guide-for-windows">
-<span id="pcie-host-setup-windows"></span><h1>Setup Guide for Windows<a class="headerlink" href="#setup-guide-for-windows" title="Permalink to this heading">#</a></h1>
+<span id="pcie-host-setup-windows"></span><h1>Setup Guide for Windows<a class="headerlink" href="#setup-guide-for-windows" title="Link to this heading">#</a></h1>
 <section id="insert-the-pcie-host-module">
-<h2>Insert the PCIe Host Module<a class="headerlink" href="#insert-the-pcie-host-module" title="Permalink to this heading">#</a></h2>
+<h2>Insert the PCIe Host Module<a class="headerlink" href="#insert-the-pcie-host-module" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Power off the computer.</p></li>
 <li><p>Plug the PCIe host board into an available PCIe slot</p>
@@ -518,14 +519,14 @@ stable operation.</p>
 </ol>
 </section>
 <section id="disable-secure-boot">
-<h2>Disable Secure Boot<a class="headerlink" href="#disable-secure-boot" title="Permalink to this heading">#</a></h2>
+<h2>Disable Secure Boot<a class="headerlink" href="#disable-secure-boot" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Navigate to your BIOS</p></li>
 <li><p>Turn off Secure Boot (Under ‘Boot’ change OS type to ‘Other OS’)</p></li>
 </ol>
 </section>
 <section id="put-windows-in-testing-mode">
-<h2>Put Windows In Testing Mode<a class="headerlink" href="#put-windows-in-testing-mode" title="Permalink to this heading">#</a></h2>
+<h2>Put Windows In Testing Mode<a class="headerlink" href="#put-windows-in-testing-mode" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As of this writing, the ONIX driver is not digitally signed by
@@ -585,13 +586,13 @@ computer</p>
 </ol>
 </section>
 <section id="install-c-runtime">
-<h2>Install C++ Runtime<a class="headerlink" href="#install-c-runtime" title="Permalink to this heading">#</a></h2>
+<h2>Install C++ Runtime<a class="headerlink" href="#install-c-runtime" title="Link to this heading">#</a></h2>
 <p>Windows does not ship with a C++ runtime. Before using ONIX on windows, you
 will need to install <a class="reference external" href="https://aka.ms/vs/16/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable for Visual Studio
 2015, 2017 and 2019</a>.</p>
 </section>
 <section id="install-device-driver">
-<h2>Install Device Driver<a class="headerlink" href="#install-device-driver" title="Permalink to this heading">#</a></h2>
+<h2>Install Device Driver<a class="headerlink" href="#install-device-driver" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Pre-built drivers target 64-bit Windows 10. Other targets will
@@ -611,7 +612,7 @@ see <strong>RIFFA</strong> in the device tree.</p>
 </ol>
 </section>
 <section id="install-onix-bonsai-library">
-<h2>Install ONIX Bonsai Library<a class="headerlink" href="#install-onix-bonsai-library" title="Permalink to this heading">#</a></h2>
+<h2>Install ONIX Bonsai Library<a class="headerlink" href="#install-onix-bonsai-library" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>If you don’t have Bonsai on your computer, visit <a class="reference external" href="https://bonsai-rx.org/">https://bonsai-rx.org/</a> and
 install the latest release.</p></li>
@@ -627,7 +628,7 @@ library and visualization tools.</p></li>
 </ol>
 </section>
 <section id="using-bonsai">
-<h2>Using Bonsai<a class="headerlink" href="#using-bonsai" title="Permalink to this heading">#</a></h2>
+<h2>Using Bonsai<a class="headerlink" href="#using-bonsai" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>New to Bonsai? The <a class="reference internal" href="../../Software%20Guide/Bonsai.ONIX/GettingStarted.html#bonsai-gettingstarted"><span class="std std-ref">Getting Started</span></a> page lists resources for learning Bonsai.</p></li>
 <li><p>Navigate to <a class="reference internal" href="../../Software%20Guide/Bonsai.ONIX/index.html#bonsai-onixref"><span class="std std-ref">Bonsai.ONIX</span></a> for a high-level overview and list of compatible devices. Click on any listed device in the left-hand navigation menu to view an example workflow using that device.</p></li>
@@ -746,7 +747,7 @@ library and visualization tools.</p></li>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

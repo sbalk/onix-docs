@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -391,6 +391,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/ElectricalStimulationDevice.html">ElectricalStimulationDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/OpticalStimulationDevice.html">OpticalStimulationDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/NeuropixelsV1Device.html">NeuropixelsV1Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html">NeuropixelsV1eDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/MiniscopeV3Device.html">MiniscopeV3Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/MiniscopeV4Device.html">MiniscopeV4Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai.ONIX/Nodes/MiniscopeV4BNO055Device.html">MiniscopeV4BNO055Device</a></li>
@@ -468,7 +469,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="usage">
-<span id="oni-repl-usage"></span><h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h1>
+<span id="oni-repl-usage"></span><h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">oni-repl &lt;driver&gt; [slot] [-d] [-D &lt;value&gt;] [-n &lt;value&gt;] [-i &lt;device index&gt;]</span>
@@ -476,7 +477,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="required-arguments">
-<h2>Required Arguments<a class="headerlink" href="#required-arguments" title="Permalink to this heading">#</a></h2>
+<h2>Required Arguments<a class="headerlink" href="#required-arguments" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt>&lt;driver&gt;</dt><dd><p>Hardware driver to dynamically link (e.g. <a class="reference internal" href="../../API%20Reference/drivers/riffa.html#riffa"><span class="std std-ref">riffa</span></a>,
 <a class="reference internal" href="../../API%20Reference/drivers/ft600.html#ft600"><span class="std std-ref">ft600</span></a>, <a class="reference internal" href="../../API%20Reference/drivers/test.html#test-driver"><span class="std std-ref">test</span></a>, etc.)</p>
@@ -487,7 +488,7 @@ If none is provided, the driver-defined default will be used.</p>
 </dl>
 </section>
 <section id="command-line-options">
-<h2>Command Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this heading">#</a></h2>
+<h2>Command Line Options<a class="headerlink" href="#command-line-options" title="Link to this heading">#</a></h2>
 <dl class="option-list">
 <dt><kbd><span class="option">-d</span></kbd></dt>
 <dd><p>Display frames. If specified, frames produced by the oni hardware will be printed to the console.</p>
@@ -529,7 +530,7 @@ If none is provided, the driver-defined default will be used.</p>
 </dl>
 </section>
 <section id="repl-commands">
-<h2>REPL Commands<a class="headerlink" href="#repl-commands" title="Permalink to this heading">#</a></h2>
+<h2>REPL Commands<a class="headerlink" href="#repl-commands" title="Link to this heading">#</a></h2>
 <p>When the program is started with valid command line arguments, the user is
 presented with an ASCII Open Ephys logo followed by the current Device Table
 governed by the newly opened acquisition context along with a set of messages
@@ -746,7 +747,7 @@ index 0) and a single headstage (starting at device index 256).</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

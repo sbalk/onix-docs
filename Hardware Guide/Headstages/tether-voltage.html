@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -47,7 +47,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Miniscopes" href="../Miniscopes/index.html" />
-    <link rel="prev" title="Neuropixels-1.0 Headstage" href="headstage-neuropix.html" />
+    <link rel="prev" title="Neuropixels-1.0e Headstage" href="headstage-neuropix-1e.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,13 +489,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="tethered-headstage-voltages">
-<span id="tether-voltage"></span><h1>Tethered Headstage Voltages<a class="headerlink" href="#tethered-headstage-voltages" title="Permalink to this heading">#</a></h1>
+<span id="tether-voltage"></span><h1>Tethered Headstage Voltages<a class="headerlink" href="#tethered-headstage-voltages" title="Link to this heading">#</a></h1>
 <p>The voltage on the headstage must be carefully regulated: if its too low the
 headstage will not function reliably. If the voltage is too high sensitive
 components could be damaged. Many issues with the system can be traced back to
 inadequate headstage voltage supply.</p>
 <section id="setting-headstage-voltage">
-<h2>Setting headstage voltage<a class="headerlink" href="#setting-headstage-voltage" title="Permalink to this heading">#</a></h2>
+<h2>Setting headstage voltage<a class="headerlink" href="#setting-headstage-voltage" title="Link to this heading">#</a></h2>
 <p>Each headstage has a minimum and maximum voltage requirement (e.g. 5.3 to  5.7
 Volts for <a class="reference internal" href="headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a>) circuits on the board to function properly. If
 the voltage is far too low, the green LED on the headstage will be dim and
@@ -522,14 +523,15 @@ voltage setting is persistent until computer power off. It gets stored in the
 hardware, so even after a reboot, it will be set to the latest value.</p>
 </section>
 <section id="measuring-headstage-voltage">
-<span id="measure-voltage"></span><h2>Measuring headstage voltage<a class="headerlink" href="#measuring-headstage-voltage" title="Permalink to this heading">#</a></h2>
+<span id="measure-voltage"></span><h2>Measuring headstage voltage<a class="headerlink" href="#measuring-headstage-voltage" title="Link to this heading">#</a></h2>
 <p>Use a multimeter to probe the headstage at the two points marked below: the
 ground pin and either terminal of the large inductor on the headstage.</p>
 <img alt="../../_images/measure-voltage-64.png" src="../../_images/measure-voltage-64.png" />
 <img alt="../../_images/measure-voltage-npix.png" src="../../_images/measure-voltage-npix.png" />
+<img alt="../../_images/measure-voltage-np1e.webp" src="../../_images/measure-voltage-np1e.webp" />
 </section>
 <section id="rebooting">
-<h2>Rebooting<a class="headerlink" href="#rebooting" title="Permalink to this heading">#</a></h2>
+<h2>Rebooting<a class="headerlink" href="#rebooting" title="Link to this heading">#</a></h2>
 <p>If you have slowly increased the voltage supplied to a headstage, but it does
 not appear as a tab in the ONI-Context, try turning the voltage supply to 0 and
 back to the higher value before refreshing the ONI-Context.</p>
@@ -554,12 +556,12 @@ back to the higher value before refreshing the ONI-Context.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="headstage-neuropix.html"
+       href="headstage-neuropix-1e.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Neuropixels-1.0 Headstage</p>
+        <p class="prev-next-title">Neuropixels-1.0e Headstage</p>
       </div>
     </a>
     <a class="right-next"
@@ -642,7 +644,7 @@ back to the higher value before refreshing the ONI-Context.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

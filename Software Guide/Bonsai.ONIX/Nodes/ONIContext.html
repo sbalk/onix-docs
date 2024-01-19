@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -391,6 +391,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="ElectricalStimulationDevice.html">ElectricalStimulationDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="OpticalStimulationDevice.html">OpticalStimulationDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NeuropixelsV1Device.html">NeuropixelsV1Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NeuropixelsV1eDevice.html">NeuropixelsV1eDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV3Device.html">MiniscopeV3Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV4Device.html">MiniscopeV4Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV4BNO055Device.html">MiniscopeV4BNO055Device</a></li>
@@ -473,7 +474,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="onicontext">
-<span id="bonsai-onicontext"></span><h1>ONIContext<a class="headerlink" href="#onicontext" title="Permalink to this heading">#</a></h1>
+<span id="bonsai-onicontext"></span><h1>ONIContext<a class="headerlink" href="#onicontext" title="Link to this heading">#</a></h1>
 <p>A <a class="reference external" href="https://bonsai-rx.org/docs/editor/#toolbox">Bonsai source</a> that manages a
 <a class="reference internal" href="../../../API%20Reference/liboni/oni.html#oni-h-acquisition-context"><span class="std std-ref">Acquisition Context</span></a> and allows basic acquisition parameterization.
 There must be at least one of these in every workflow that uses ONIX hardware.</p>
@@ -492,7 +493,7 @@ There must be at least one of these in every workflow that uses ONIX hardware.</
     <div class="workflow-name"><b>ONIContext.bonsai</b></div>
     <div class="workflow-image"><img src="../../../_static/bonsai/workflows/ONIContext.svg" alt="ONIContext" /></div>
 </div><section id="purpose">
-<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h2>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Bonsai.ONIX</span></code>’s design mirrors the that of the <a class="reference external" href="https://github.com/open-ephys/ONI">Open Neuro Interface
 specification</a>. Control of and
 acquisition from ONIX hardware is handled by a combination of two or more
@@ -505,7 +506,7 @@ to use it.</p>
 <figcaption>
 <p><span class="caption-text"><a class="reference internal" href="#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> is responsible for communicating with hardware and
 the informing devices, identified using their DeviceAddress, that they have
-new data.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+new data.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -534,7 +535,7 @@ present in a single computer, then each will need its own
 </div>
 </section>
 <section id="configuration-gui">
-<h2>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Permalink to this heading">#</a></h2>
+<h2>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> configuration is performed using a GUI provided in the
 Bonsai.ONIX.Design library. It can be opened by double clicking on the
 <a class="reference internal" href="#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node if Bonsai.ONIX.Design has been installed.</p>
@@ -570,7 +571,7 @@ not be saved in the workflow file. To save device register values to file,
 device configuration must be performed using dedicated device nodes.</p>
 </div>
 <section id="settings-hubs">
-<span id="bonsai-onicontext-hubsettings"></span><h3>Settings ➞  Hubs…<a class="headerlink" href="#settings-hubs" title="Permalink to this heading">#</a></h3>
+<span id="bonsai-onicontext-hubsettings"></span><h3>Settings ➞  Hubs…<a class="headerlink" href="#settings-hubs" title="Link to this heading">#</a></h3>
 <p>ONIX-specific hub options such as access to raw deserializer data streams:</p>
 <img alt="../../../_images/ONIContext_hub-configuration.png" class="align-center" src="../../../_images/ONIContext_hub-configuration.png" />
 <dl class="field-list simple">
@@ -584,7 +585,7 @@ device configuration must be performed using dedicated device nodes.</p>
 </dl>
 </section>
 <section id="settings-host-sync">
-<span id="bonsai-onicontext-syncsettings"></span><h3>Settings ➞  Host Sync…<a class="headerlink" href="#settings-host-sync" title="Permalink to this heading">#</a></h3>
+<span id="bonsai-onicontext-syncsettings"></span><h3>Settings ➞  Host Sync…<a class="headerlink" href="#settings-host-sync" title="Link to this heading">#</a></h3>
 <p>Hardware synchronization configuration for two or more hosts that are connected
 with a synchronization cable.</p>
 <img alt="../../../_images/ONIContext_host-sync.png" class="align-center" src="../../../_images/ONIContext_host-sync.png" />
@@ -727,7 +728,7 @@ clocks will drift over time.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

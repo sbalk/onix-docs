@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -46,7 +46,7 @@
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="MiniscopeV3Device" href="MiniscopeV3Device.html" />
+    <link rel="next" title="NeuropixelsV1eDevice" href="NeuropixelsV1eDevice.html" />
     <link rel="prev" title="OpticalStimulationDevice" href="OpticalStimulationDevice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -391,6 +391,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="ElectricalStimulationDevice.html">ElectricalStimulationDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="OpticalStimulationDevice.html">OpticalStimulationDevice</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">NeuropixelsV1Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NeuropixelsV1eDevice.html">NeuropixelsV1eDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV3Device.html">MiniscopeV3Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV4Device.html">MiniscopeV4Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MiniscopeV4BNO055Device.html">MiniscopeV4BNO055Device</a></li>
@@ -473,7 +474,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="neuropixelsv1device">
-<span id="bonsai-neuropixelsv1dev"></span><h1>NeuropixelsV1Device<a class="headerlink" href="#neuropixelsv1device" title="Permalink to this heading">#</a></h1>
+<span id="bonsai-neuropixelsv1dev"></span><h1>NeuropixelsV1Device<a class="headerlink" href="#neuropixelsv1device" title="Link to this heading">#</a></h1>
 <p>A <a class="reference external" href="https://bonsai-rx.org/docs/editor/#toolbox">Bonsai source</a>  that wraps a
 <a class="reference internal" href="../../../Hardware%20Guide/Datasheets/neuropixels-v1.html#onidatasheet-neuropixels-v1"><span class="std std-ref">Neuropixels V1</span></a> device.</p>
 <dl class="field-list">
@@ -502,11 +503,11 @@ dropped.</p></li>
     <div class="workflow-name"><b>NeuropixelsV1.bonsai</b></div>
     <div class="workflow-image"><img src="../../../_static/bonsai/workflows/NeuropixelsV1.svg" alt="NeuropixelsV1" /></div>
 </div><section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
 <p>Configuration is performed using a combination of the property pane and a
 dedicated configuration GUI.</p>
 <section id="property-pane">
-<h3>Property Pane<a class="headerlink" href="#property-pane" title="Permalink to this heading">#</a></h3>
+<h3>Property Pane<a class="headerlink" href="#property-pane" title="Link to this heading">#</a></h3>
 <p>Parameters available through the property pane are as follows:</p>
 <table class="table">
 <thead>
@@ -542,7 +543,7 @@ double clicking on the node.</p></td>
 </table>
 </section>
 <section id="configuration-gui">
-<h3>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Permalink to this heading">#</a></h3>
+<h3>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Link to this heading">#</a></h3>
 <p>The <strong>Neuropixels 1.0 Configuration GUI</strong>, which is a part of the
 <code class="docutils literal notranslate"><span class="pre">Bonsai.ONIX.Design</span></code> library, is opened by double clicking on the
 NeuropixelsV1Device node when editing the workflow or clicking the ellipsis
@@ -551,11 +552,11 @@ pane.</p>
 <figure class="align-left" id="id2">
 <img alt="The Neuropixels 1.0 configuration GUI." src="../../../_images/neuropixelsv1_configuration-gui-callouts.png" />
 <figcaption>
-<p><span class="caption-text">The Neuropixels 1.0 configuration GUI.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The Neuropixels 1.0 configuration GUI.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="importing-imec-calibration-data">
-<h4>Importing IMEC Calibration Data<a class="headerlink" href="#importing-imec-calibration-data" title="Permalink to this heading">#</a></h4>
+<h4>Importing IMEC Calibration Data<a class="headerlink" href="#importing-imec-calibration-data" title="Link to this heading">#</a></h4>
 <p>Neuropixels 1.0 probes are shipped with two calibration files that must be
 uploaded to the probe for proper operation. For example, the calibration files
 for probe 19051023592 are:</p>
@@ -596,7 +597,7 @@ parameters.</p>
 </ol>
 </section>
 <section id="configuring-the-probe">
-<h4>Configuring the Probe<a class="headerlink" href="#configuring-the-probe" title="Permalink to this heading">#</a></h4>
+<h4>Configuring the Probe<a class="headerlink" href="#configuring-the-probe" title="Link to this heading">#</a></h4>
 <p>The easiest way to select active electrodes is by using the GUI on the
 <strong>Probe</strong> tab. This simple user interface lets you pan around the probe, zoom
 in and out, and set the properties of individual electrodes or groups of them.</p>
@@ -638,7 +639,7 @@ probe, right-click it and select <strong>Apply to column</strong>.</p>
 </div>
 </section>
 <section id="uploading-to-the-probe">
-<h4>Uploading to the Probe<a class="headerlink" href="#uploading-to-the-probe" title="Permalink to this heading">#</a></h4>
+<h4>Uploading to the Probe<a class="headerlink" href="#uploading-to-the-probe" title="Link to this heading">#</a></h4>
 <p>To upload your configuration to the probe, click the <strong>Upload</strong> button in the
 bottom left of the GUI. A progress bar will indicate the upload progress.</p>
 <img alt="Uploading the configuration to the probe" class="align-center" src="../../../_images/neuropixelsv1_upload-process.png" />
@@ -654,7 +655,7 @@ there is a mismatch. This option is active by default.</p>
 </div>
 </section>
 <section id="saving-configurations">
-<h4>Saving Configurations<a class="headerlink" href="#saving-configurations" title="Permalink to this heading">#</a></h4>
+<h4>Saving Configurations<a class="headerlink" href="#saving-configurations" title="Link to this heading">#</a></h4>
 <p>Complete probe configurations can be saved in easy to parse JSON or XML
 formats. These fikes contain complete information about the state of a given
 probe. This includes all calibration file information, active electrodes, gains
@@ -673,7 +674,7 @@ etc, and therefore can be useful metadata during analysis.</p>
 </ol>
 </section>
 <section id="loading-configurations">
-<h4>Loading Configurations<a class="headerlink" href="#loading-configurations" title="Permalink to this heading">#</a></h4>
+<h4>Loading Configurations<a class="headerlink" href="#loading-configurations" title="Link to this heading">#</a></h4>
 <p>Configuration files can be imported to, for instance, recall a pattern of
 active electrodes.</p>
 <div class="admonition warning">
@@ -727,11 +728,11 @@ one before using it.</p>
       </div>
     </a>
     <a class="right-next"
-       href="MiniscopeV3Device.html"
+       href="NeuropixelsV1eDevice.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MiniscopeV3Device</p>
+        <p class="prev-next-title">NeuropixelsV1eDevice</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -815,7 +816,7 @@ one before using it.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

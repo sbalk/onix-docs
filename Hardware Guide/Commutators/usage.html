@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,11 +489,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="usage">
-<span id="commutator-usage"></span><h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h1>
+<span id="commutator-usage"></span><h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h1>
 <p>The commutator is powered over USB. It can be controlled using the buttons on
 the front panel or by receiving commands from the computer over USB.</p>
 <section id="led">
-<h2>LED<a class="headerlink" href="#led" title="Permalink to this heading">#</a></h2>
+<h2>LED<a class="headerlink" href="#led" title="Link to this heading">#</a></h2>
 <p>The LED tells you about the commutator state:</p>
 <ol class="arabic simple">
 <li><p>Flashing red (<em>Charging</em>): commutator is charging internal super-capacitors.
@@ -507,7 +508,7 @@ turn or respond to button presses or external commands.</p></li>
 turned back on by pressing it.</p>
 </section>
 <section id="buttons">
-<h2>Buttons<a class="headerlink" href="#buttons" title="Permalink to this heading">#</a></h2>
+<h2>Buttons<a class="headerlink" href="#buttons" title="Link to this heading">#</a></h2>
 <p>The front panel has four buttons.</p>
 <a class="reference internal image-reference" href="../../_images/commutator_front_labelled.png"><img alt="../../_images/commutator_front_labelled.png" class="align-center" src="../../_images/commutator_front_labelled.png" style="width: 70%;" /></a>
 <dl class="field-list simple">
@@ -542,23 +543,23 @@ unwanted visual stimulus). Pressing it again turns it back on.</p>
 </dl>
 </section>
 <section id="remote-control-interface">
-<h2>Remote control interface<a class="headerlink" href="#remote-control-interface" title="Permalink to this heading">#</a></h2>
+<h2>Remote control interface<a class="headerlink" href="#remote-control-interface" title="Link to this heading">#</a></h2>
 <p>When manual buttons are not being pressed, the commutator accepts JSON-encoded
 commands over its serial interface. Here are examples of all commands that can
 be sent:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{enable : true}     // Enable commutator (default = false)
-{led : false}       // Turn off RGB LED (default = true)
-{speed : 250}       // Set turn speed to 250 RPM (default = 50 RPM, valid ∈ (0, 500] RPM)
-{turn : 1.1}        // 1.1 turns CW
-{turn : -1.1}       // 1.1 turns CCW
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="err">e</span><span class="kc">na</span><span class="err">ble</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span><span class="w">     </span><span class="c1">// Enable commutator (default = false)</span>
+<span class="p">{</span><span class="err">led</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span><span class="w">       </span><span class="c1">// Turn off RGB LED (default = true)</span>
+<span class="p">{</span><span class="err">speed</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">}</span><span class="w">       </span><span class="c1">// Set turn speed to 250 RPM (default = 50 RPM, valid ∈ (0, 500] RPM)</span>
+<span class="p">{</span><span class="kc">turn</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="p">}</span><span class="w">        </span><span class="c1">// 1.1 turns CW</span>
+<span class="p">{</span><span class="kc">turn</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">-1.1</span><span class="p">}</span><span class="w">       </span><span class="c1">// 1.1 turns CCW</span>
 
-// Example multi-command. Any combo can be used.
-// In this case:
-// 1. Turn LED off
-// 1. Set speed to 25 RPM
-// 2. Excecute 1.1 turns CC
-// Ordering of commands does not matter
-{led: false, speed: 25, turn : -1.1}
+<span class="c1">// Example multi-command. Any combo can be used.</span>
+<span class="c1">// In this case:</span>
+<span class="c1">// 1. Turn LED off</span>
+<span class="c1">// 1. Set speed to 25 RPM</span>
+<span class="c1">// 2. Excecute 1.1 turns CC</span>
+<span class="c1">// Ordering of commands does not matter</span>
+<span class="p">{</span><span class="err">led</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">speed</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="kc">turn</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">-1.1</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The communator state can be read using the <code class="code docutils literal notranslate"><span class="pre">{print:}</span></code> command  which will
@@ -573,13 +574,13 @@ experiments.</p>
 </div>
 </section>
 <section id="saving-settings">
-<h2>Saving settings<a class="headerlink" href="#saving-settings" title="Permalink to this heading">#</a></h2>
+<h2>Saving settings<a class="headerlink" href="#saving-settings" title="Link to this heading">#</a></h2>
 <p>All control and speed parameters, whether changed via the remote or manual
 interface, are saved in non-volatile memory each time they are changed. The
 device will start in the same state it was last used.</p>
 </section>
 <section id="firmware">
-<h2>Firmware<a class="headerlink" href="#firmware" title="Permalink to this heading">#</a></h2>
+<h2>Firmware<a class="headerlink" href="#firmware" title="Link to this heading">#</a></h2>
 <p>The controller firmware runs on a <a class="reference external" href="https://www.pjrc.com/store/teensy32.html">Teensy
 3.2</a>. To compile this firmware and
 program the microcontroller, you need the following dependencies:</p>
@@ -710,7 +711,7 @@ installed through the Arduino IDE’s package manager.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

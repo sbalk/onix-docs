@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,7 +489,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="headstage-64">
-<span id="id1"></span><h1>Headstage-64<a class="headerlink" href="#headstage-64" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Headstage-64<a class="headerlink" href="#headstage-64" title="Link to this heading">#</a></h1>
 <p><strong>Headstage-64</strong> is a 1.5g serialized, multifunction headstage for small
 animals. This headstage is designed to function with <a class="reference internal" href="../../Adapters%20%26%20EIBs/eib-64.html#eib-64"><span class="std std-ref">EIB-64</span></a> for <a class="reference external" href="https://open-ephys.org/shuttledrive">tetrode
 microdrives</a>. Alternatively it can be
@@ -504,7 +505,7 @@ to find host hardware for your headstage.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>64 analog ephys channels and 3 auxiliary channels sampled at 30 kHz per channel</p></li>
 <li><p>A BNO055 9-axis IMU for real-time, 3D orientation tracking</p></li>
@@ -518,7 +519,7 @@ with HTC Vive base stations</p></li>
 <img alt="ONIX Headstage-64 v1.1." class="align-center" src="../../../_images/headstage-64.png" />
 </section>
 <section id="data-link-serializaiton">
-<h2>Data Link Serializaiton<a class="headerlink" href="#data-link-serializaiton" title="Permalink to this heading">#</a></h2>
+<h2>Data Link Serializaiton<a class="headerlink" href="#data-link-serializaiton" title="Link to this heading">#</a></h2>
 <p>For details on data serialiation and headstage gateware, have a look at the
 <a class="reference internal" href="../serialization.html#serialization"><span class="std std-ref">Coaxial Data Serialization &amp; Power</span></a> page, which describes how coax headstages operatate in
 general terms. Headstage-64 has the following coaxial link properties:</p>
@@ -581,7 +582,7 @@ headstage tethers</p>
 </div>
 </section>
 <section id="electrophysiology-auxiliary-analog-inputs">
-<h2>Electrophysiology &amp; Auxiliary Analog Inputs<a class="headerlink" href="#electrophysiology-auxiliary-analog-inputs" title="Permalink to this heading">#</a></h2>
+<h2>Electrophysiology &amp; Auxiliary Analog Inputs<a class="headerlink" href="#electrophysiology-auxiliary-analog-inputs" title="Link to this heading">#</a></h2>
 <p>headstage-64 uses a 64-channel, BGA-packaged <a class="reference external" href="https://intantech.com/">Intan RHD2164</a> bioamplifier chip. The chip is operated at a fixed
 sampling rate of 30 kHz/channel (including auxiliary channels). Specifically,
 it provides:</p>
@@ -605,7 +606,7 @@ connections, etc) is located on <a class="reference external" href="https://docs
 </div>
 </section>
 <section id="d-position-tracking">
-<h2>3D Position Tracking<a class="headerlink" href="#d-position-tracking" title="Permalink to this heading">#</a></h2>
+<h2>3D Position Tracking<a class="headerlink" href="#d-position-tracking" title="Link to this heading">#</a></h2>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>Move this into its own page</p>
@@ -651,14 +652,14 @@ for re-calibration and mode programming</p>
 </ol>
 </section>
 <section id="d-orientation-tracking">
-<h2>3D Orientation Tracking<a class="headerlink" href="#d-orientation-tracking" title="Permalink to this heading">#</a></h2>
+<h2>3D Orientation Tracking<a class="headerlink" href="#d-orientation-tracking" title="Link to this heading">#</a></h2>
 <p>headstage-64 has a <a class="reference external" href="https://www.bosch-sensortec.com/products/smart-sensors/bno055.html">BNO055</a> 9-axis
 inertial measurement unit that provides the absolute orientation of the
 headstage. This device produces orientation (and other) measurements are 100
 Hz.</p>
 </section>
 <section id="neural-stimulation">
-<h2>Neural Stimulation<a class="headerlink" href="#neural-stimulation" title="Permalink to this heading">#</a></h2>
+<h2>Neural Stimulation<a class="headerlink" href="#neural-stimulation" title="Link to this heading">#</a></h2>
 <p>headstage-64 provides onboard electrical and optical stimulatus generators.
 Stimulus trains can be parameterized in a similar way to the master-8 or pulse
 pal.</p>
@@ -670,7 +671,7 @@ it is important to only enable one of the devices (using its ENABLE register) pr
 to toggling this pin.</p>
 </div>
 <section id="optical-stimulation">
-<h3>Optical Stimulation<a class="headerlink" href="#optical-stimulation" title="Permalink to this heading">#</a></h3>
+<h3>Optical Stimulation<a class="headerlink" href="#optical-stimulation" title="Link to this heading">#</a></h3>
 <p>Optical stimulation is provided by a dual-channel, high-current LED driver.
 This driver can be used for LEDs or laser diodes. It provides 800-mA per
 channel. The cathodic connections can be paralleled to increase max current.
@@ -680,7 +681,7 @@ over-temperture condition. The optical stimulator is only appropriate for low
 duty-cycle pulse-type stimulation.</p>
 </section>
 <section id="electical-stimulation">
-<h3>Electical Stimulation<a class="headerlink" href="#electical-stimulation" title="Permalink to this heading">#</a></h3>
+<h3>Electical Stimulation<a class="headerlink" href="#electical-stimulation" title="Link to this heading">#</a></h3>
 <p>The electrical stimulation cicuit is an improved Howland current pump followed by
 an precision current measurement circuit. The current pump is supplied by +/-15V
 rails and can supply up to +/- 2.5 mA. The output current is defined as:</p>
@@ -708,12 +709,16 @@ ISTIM = -2.5mA -&gt; IMEAS = 0.25V
 </section>
 </section>
 <section id="bill-of-materials">
-<h2>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this heading">#</a></h2>
+<h2>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The interactive BOM is <a class="reference external" href="../../../_static/boms/headstage-64_1r3_bom.html">here</a></p></li>
 <li><p>The complete BOM (including vendor part numbers) is located on <a class="reference external" href="https://docs.google.com/spreadsheets/d/1F-KWcdvH_63iXjZf0cgCfDiFX6XXW3qw6rlR8DZrFpQ/edit#gid=138167638">this google
 sheet</a></p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Have a look at the <span class="xref std std-ref">tether-voltage</span> page for more details on probing and verifying headstage power voltages</p>
+</div>
 </section>
 </section>
 
@@ -831,7 +836,7 @@ sheet</a></p></li>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -386,7 +386,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -489,7 +490,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="hs64-electrical-stimulator">
-<span id="onidatasheet-estim-hs64"></span><h1>HS64 Electrical Stimulator<a class="headerlink" href="#hs64-electrical-stimulator" title="Permalink to this heading">#</a></h1>
+<span id="onidatasheet-estim-hs64"></span><h1>HS64 Electrical Stimulator<a class="headerlink" href="#hs64-electrical-stimulator" title="Link to this heading">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Jie (Jack) Zhang &amp; Jonathan P. Newman</p>
@@ -508,7 +509,7 @@ document.write(`
 </dd>
 </dl>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
 <p>The <strong>HS64 Electrical Stimulator</strong> is a combined precision bipolar current
 source and sequencer for generating electrical stimuli. The circuit consists of
 an enhanced Howland current pump driven by a DAC. A bipolar 15 volt supply is
@@ -536,10 +537,10 @@ stimulus amplitudes.</p>
 </div>
 </section>
 <section id="register-programming">
-<h2>Register Programming<a class="headerlink" href="#register-programming" title="Permalink to this heading">#</a></h2>
+<h2>Register Programming<a class="headerlink" href="#register-programming" title="Link to this heading">#</a></h2>
 <p>Register IO is detailed in the table below.</p>
 <table class="table" id="estim-hs64-regs">
-<caption><span class="caption-text">HS64 Electrical Stimulator Registers</span><a class="headerlink" href="#estim-hs64-regs" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-text">HS64 Electrical Stimulator Registers</span><a class="headerlink" href="#estim-hs64-regs" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Address</p></th>
 <th class="head"><p>Name</p></th>
@@ -704,21 +705,21 @@ parameter.</p></td>
 <a class="reference internal image-reference" href="../../_images/estim-hs64_parameters.png"><img alt="Headstage-64 electrical stimulator register definitions" src="../../_images/estim-hs64_parameters.png" style="width: 502.5px; height: 504.5px;" /></a>
 <figcaption>
 <p><span class="caption-text">A diagram of the stimulus parameters presented in the
-<a class="reference internal" href="#estim-hs64-regs"><span class="std std-ref">HS64 Electrical Stimulator Registers</span></a> table.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<a class="reference internal" href="#estim-hs64-regs"><span class="std std-ref">HS64 Electrical Stimulator Registers</span></a> table.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For registers specifying electrical current, the following transform applies:</p>
 <div class="math notranslate nohighlight" id="equation-ctoi">
-<span class="eqno">(1)<a class="headerlink" href="#equation-ctoi" title="Permalink to this equation">#</a></span>\[I_{stim} = Code * \frac{5 mA}{(2^N - 1)} - 2.5 mA\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-ctoi" title="Link to this equation">#</a></span>\[I_{stim} = Code * \frac{5 mA}{(2^N - 1)} - 2.5 mA\]</div>
 <p>where <em>N</em> specifies the bit resolution of the circuit’s DAC, which is made
 available in the DACREZ register.</p>
 </section>
 <section id="device-to-host-data-frames">
-<h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Permalink to this heading">#</a></h2>
+<h2>Device To Host Data Frames<a class="headerlink" href="#device-to-host-data-frames" title="Link to this heading">#</a></h2>
 <p>No frames are transmitted to the host.</p>
 </section>
 <section id="host-to-device-data-frames">
-<h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Permalink to this heading">#</a></h2>
+<h2>Host To Device Data Frames<a class="headerlink" href="#host-to-device-data-frames" title="Link to this heading">#</a></h2>
 <p>This device does not accept input frames. All write attempts will fail with an
 error.</p>
 </section>
@@ -831,7 +832,7 @@ error.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>

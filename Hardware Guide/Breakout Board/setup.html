@@ -36,9 +36,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
@@ -385,7 +385,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../Headstages/headstage-64/test-board-64.html">Test Board for Headstage-64</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1.html">Neuropixels-1.0 Headstage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Headstages/headstage-neuropix-1e.html">Neuropixels-1.0e Headstage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Headstages/tether-voltage.html">Tethered Headstage Voltages</a></li>
 </ul>
 </li>
@@ -488,9 +489,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="breakout-board-guide">
-<span id="breakout-setup"></span><h1>Breakout Board Guide<a class="headerlink" href="#breakout-board-guide" title="Permalink to this heading">#</a></h1>
+<span id="breakout-setup"></span><h1>Breakout Board Guide<a class="headerlink" href="#breakout-board-guide" title="Link to this heading">#</a></h1>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <p>The Breakout Board provides access to signals to and from the PCIe host. Each
 PCIe host is connected to a breakout board using the following connections:</p>
 <ol class="arabic simple">
@@ -516,7 +517,7 @@ links, but the breakout board provides four. This is is by design. The breakout
 is designed to be compatible with future host hardware.</p>
 </div>
 <section id="sdr-cable">
-<h3>SDR Cable<a class="headerlink" href="#sdr-cable" title="Permalink to this heading">#</a></h3>
+<h3>SDR Cable<a class="headerlink" href="#sdr-cable" title="Link to this heading">#</a></h3>
 <p>Plug in the SDR cable for analog and digital I/O.</p>
 <a class="reference internal image-reference" href="../../_images/breakout_IO_cable.jpg"><img alt="../../_images/breakout_IO_cable.jpg" class="align-center" src="../../_images/breakout_IO_cable.jpg" style="width: 50%;" /></a>
 <ul>
@@ -538,7 +539,7 @@ small hole just below the ‘Digital Out’ marking to reset the onboard FPGA.</
 </ul>
 </section>
 <section id="mmcx-cables">
-<h3>MMCX Cables<a class="headerlink" href="#mmcx-cables" title="Permalink to this heading">#</a></h3>
+<h3>MMCX Cables<a class="headerlink" href="#mmcx-cables" title="Link to this heading">#</a></h3>
 <p>Plug in MMCX coaxial connections for headstage ports and clock signals.</p>
 <a class="reference internal image-reference" href="../../_images/MMCX_cable.jpg"><img alt="../../_images/MMCX_cable.jpg" class="align-center" src="../../_images/MMCX_cable.jpg" style="width: 50%;" /></a>
 <ul class="simple">
@@ -559,7 +560,7 @@ connect and remove MMCX cables without damaging the connector.</p>
 </div>
 </section>
 <section id="leds">
-<h3>LEDs<a class="headerlink" href="#leds" title="Permalink to this heading">#</a></h3>
+<h3>LEDs<a class="headerlink" href="#leds" title="Link to this heading">#</a></h3>
 <p>RGB LEDs indicate various port states, signal directions, digital signals, and
 acquisition states, etc. The following diagrams provide definitions for each
 LED color on the breakout board.</p>
@@ -569,12 +570,12 @@ LED color on the breakout board.</p>
 <p><span class="caption-text">Indication LED legend. Half-filled circles indicate a flashing LED. An
 error status on a headstage port indicates a loss of lock during
 acquisition. The headstage connection must be re-established and
-acquisition restarted.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+acquisition restarted.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="buttons">
-<h3>Buttons<a class="headerlink" href="#buttons" title="Permalink to this heading">#</a></h3>
+<h3>Buttons<a class="headerlink" href="#buttons" title="Link to this heading">#</a></h3>
 <p>Buttons can be used to log various experimental events and turn on and off the
 indication LEDs. The button state is sent with digital data to the PCIe Host.
 Pressing a button sends a single event per change in button state. Holding a
@@ -598,19 +599,19 @@ all LEDs to be completely turned off for light-sensitive experiments.</p>
 <figcaption>
 <p><span class="caption-text">Numbers show integer value transmitted to host from pressing each. The
 first button also controls the illumination state of the indication LEDs on
-the breakout board.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+the breakout board.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="gateware">
-<h2>Gateware<a class="headerlink" href="#gateware" title="Permalink to this heading">#</a></h2>
+<h2>Gateware<a class="headerlink" href="#gateware" title="Link to this heading">#</a></h2>
 <p>The breakout board contains a <a class="reference external" href="https://tinyfpga.com/bx/guide.html">TinyFPGA BX</a> (Lattice ICE40 breakout board) for
 digital input serialization, digital output deserialization, interpreting user
 input, and driving indication LEDs. The <a class="reference external" href="https://github.com/open-ephys/onix-breakout/tree/main/gateware">breakout board gateware</a> is
 impelemented using an open-source toolchain (<a class="reference external" href="http://www.clifford.at/yosys/">Yosys</a> and <a class="reference external" href="https://github.com/YosysHQ/nextpnr">NextPnR</a>).</p>
 <section id="updating-the-gateware">
-<h3>Updating the Gateware<a class="headerlink" href="#updating-the-gateware" title="Permalink to this heading">#</a></h3>
+<h3>Updating the Gateware<a class="headerlink" href="#updating-the-gateware" title="Link to this heading">#</a></h3>
 <p>If Open Ephys team have provided you with an updated firmware file for the
 Breakout Board, the micro-USB port on the Breakout Board (labelled ‘config’)
 can be used to update the firmware on the board.</p>
@@ -736,7 +737,7 @@ can be used to update the firmware on the board.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      © Copyright 2010-2024, Open Ephys &amp; Contributors.
       <br/>
     
   </p>
