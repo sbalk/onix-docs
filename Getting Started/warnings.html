@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Getting Started &#8212; ONIX Docs</title>
+    <title>Usage Warnings &#8212; ONIX Docs</title>
   
   
   
@@ -42,12 +42,10 @@
     <script src="../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Getting Started/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Getting Started/warnings';</script>
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="What is ONIX?" href="whatisonix.html" />
-    <link rel="prev" title="Home" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -133,8 +131,8 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
                         Getting Started
                       </a>
                     </li>
@@ -255,7 +253,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -273,8 +271,8 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
                         Getting Started
                       </a>
                     </li>
@@ -360,17 +358,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="whatisonix.html">What is ONIX?</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -403,7 +390,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Getting Started</li>
+    <li class="breadcrumb-item active" aria-current="page">Usage Warnings</li>
   </ul>
 </nav>
 </div>
@@ -420,72 +407,70 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="getting-started">
-<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section id="usage-warnings">
+<span id="warnings"></span><h1>Usage Warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Improper setup and usage can cause damage to system components.</p>
 </div>
-<section id="understanding-the-system">
-<h2>Understanding the System<a class="headerlink" href="#understanding-the-system" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Read <a class="reference internal" href="whatisonix.html#what-is-onix"><span class="std std-ref">‘What is ONIX?’</span></a> for a high-level introduction to
-this hardware and how it differs from other neuroscience acquisition
-systems.</p></li>
-<li><p>Our <a class="reference internal" href="../faq.html#faq"><span class="std std-ref">FAQ</span></a> contains answers to general questions about the system.</p></li>
-<li><p>See the <a class="reference internal" href="../Hardware%20Guide/index.html#hardware-guide"><span class="std std-ref"> Hardware Guide</span></a> for a description of each ONIX hardware component and decide which you will need.</p></li>
+<li><p>Read the following warnings before starting to work with your system. These are crucial aspects to consider during setup and usage that are included in the documentation but are listed here for your convenience.</p></li>
+<li><p>Read the complete documentation carefully to understand how the system works and refer back to these warnings before using it.</p></li>
 </ul>
-</section>
-<section id="usage-warnings">
-<h2>Usage warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Read <a class="reference internal" href="warnings.html#warnings"><span class="std std-ref">Usage Warnings</span></a> before starting to work with the system to avoid causing damage to system components.</p></li>
+<section id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Connecting or disconnecting the breakout board while the PC is on causes damage to the FMChost. More: <a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/setup.html#breakout-setup"><span class="std std-ref">Breakout Board Guide</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Power off the PC before connecting/disconnecting the breakout board.</strong></p></li>
 </ul>
-</section>
-<section id="setting-up-onix">
-<h2>Setting up ONIX<a class="headerlink" href="#setting-up-onix" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>Check that you have all the necessary hardware. A full ONIX setup consists of:</p>
-<p><strong>Hardware</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../Hardware%20Guide/PCIe%20Host/index.html#pcie-host"><span class="std std-ref">PCIe Host</span></a></p></li>
-<li><p>Acquisition computer</p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/index.html#breakout"><span class="std std-ref">Breakout Board</span></a></p></li>
-<li><p>ONI-compliant device (such as a <a class="reference internal" href="../Hardware%20Guide/Headstages/index.html#headstages"><span class="std std-ref">headstage</span></a> or
-<a class="reference internal" href="../Hardware%20Guide/Miniscopes/index.html#miniscopes"><span class="std std-ref">Miniscopes</span></a>)</p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Commutators/index.html#commutators"><span class="std std-ref">Coaxial Commutators</span></a></p></li>
-<li><p>2x <a class="reference internal" href="../Hardware%20Guide/Lighthouses/index.html#lighthouses"><span class="std std-ref">lighthouse base stations</span></a></p></li>
-</ul>
-<p><strong>Cables</strong> <a class="reference internal" href="../Hardware%20Guide/Connections%20%26%20Cables/index.html#cable-list"><span class="std std-ref">(All cables are listed here)</span></a>.</p>
-<ul class="simple">
-<li><p>PCIe host board to Breakout board (headstage link) cable (MMCX to MMCX)</p></li>
-<li><p>PCIe host board to Breakout board (Digital and Analog I/O link) cable (SDR to
-SDR 26 POS)</p></li>
-<li><p>Headstage Tethers, coaxial, 0.38 mm OD</p></li>
-<li><p>Commutator power &amp; data cable (USB A to Micro B)</p></li>
-<li><p>Breakout board to Commutator cable (headstage link; SMA to SMA)</p></li>
-<li><p>Lighthouse synchronization cable (3.5 mm Stereo Jack Plug to Plug)</p></li>
-</ul>
+</div></blockquote>
 </li>
-<li><p>Install the PCIe host board and configure the acquisition computer by
-following the <a class="reference internal" href="../Hardware%20Guide/PCIe%20Host/setup-windows.html#pcie-host-setup-windows"><span class="std std-ref">Setup Guide for Windows</span></a>.</p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Lighthouses/setup.html#lighthouse-setup"><span class="std std-ref">Mount and connect the 3D-Tracking Lighthouses</span></a></p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Commutators/setup.html#commutator-setup"><span class="std std-ref">Mount and connect the commutator</span></a></p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/setup.html#breakout-setup"><span class="std std-ref">Connect the Breakout Board to the PCIe host board</span></a>.</p></li>
-<li><p>Connect a headstage, Miniscope V4 or other ONI compliant recording device by
-<a class="reference internal" href="../Hardware%20Guide/Headstages/setup.html#headstage-setup"><span class="std std-ref">following these steps</span></a>. Be sure to read <a class="reference internal" href="../Hardware%20Guide/Headstages/tether-voltage.html#tether-voltage"><span class="std std-ref">this
-page on the voltage supplied to the headstage</span></a> to prevent
-damaging your headstage.</p></li>
-<li><p>Test the installation.</p>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Bonsai workflows for testing each component</p>
-</div>
+<li><p>Headstage voltage must be configured correctly for operation. The voltage that works for one headstage can damage another, and depends on your hardware configuration such as tether length. More: <a class="reference internal" href="../Hardware%20Guide/Headstages/tether-voltage.html#tether-voltage"><span class="std std-ref">Tethered Headstage Voltages</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Ensure each headstage is configured with the correct voltage according to its specification before connecting and switching on the headstage port switch.</strong></p></li>
+</ul>
+</div></blockquote>
 </li>
-</ol>
+</ul>
 </section>
-<section id="using-onix">
-<h2>Using ONIX<a class="headerlink" href="#using-onix" title="Link to this heading">#</a></h2>
-<p>ONIX uses Bonsai for data acquisition. See the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/GettingStarted.html#bonsai-gettingstarted"><span class="std std-ref">Getting Started</span></a>
-page to learn how to install Bonsai and use it to acquire from ONIX.</p>
+<section id="software">
+<h2>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h2>
+<p><em>For the current Bonsai.ONIX library which is being revised to improve usability</em></p>
+<ul>
+<li><p>Headstage port voltage configuration is managed via the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node or the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node. The changes you make using these nodes apply immediately and persist in hardware even if the Bonsai workflow is not running. Headstage port voltage is reset to the default 4.9V only on a power cycle (power off and on — not reboot).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Keep the headstage port switches off until you have configured each port correctly.</strong></p></li>
+<li><p><strong>Remember to set the headstage voltage to the desired value after a power cycle.</strong></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> provides a dynamic window to read and write to hardware, but parameters such as device voltage are not saved in the node when the workflow is saved. The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node also reads and writes to hardware, but parameters are saved with the workflow. On loading a workflow, Bonsai writes the parameter values set when the workflow was last saved.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node shows that value and when you save the workflow this value is not saved. Therefore, that value will not be set to hardware when you load the workflow again. On loading the workflow, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node will be reading the voltage that is already set on the hardware and showing this  in the <code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> field.</p></li>
+<li><p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node shows that value and when you save the workflow this value is saved. Therefore, that value will be set to hardware when you load the workflow again. If you make changes to the voltage value (with any node) and save the workflow, they will be saved in the <code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> property of the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Any workflows containing the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node require the <a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> to be connected before the workflows can be opened or loaded into Bonsai.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Check that the voltage set to the headstage port is correct for the <a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> by using a workflow of a single <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node to configure it before connecting the headstage in order to open a workflow that contains the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>An <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node or any device node in a workflow can override device settings in another workflow if device addresses are not distinct, because these nodes read/write directly to hardware.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Only have one workflow open at a time.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
 </section>
 </section>
 
@@ -506,24 +491,6 @@ page to learn how to install Bonsai and use it to acquire from ONIX.</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Home</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="whatisonix.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What is ONIX?</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -542,17 +509,15 @@ page to learn how to install Bonsai and use it to acquire from ONIX.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-system">Understanding the System</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-warnings">Usage warnings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-onix">Setting up ONIX</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-onix">Using ONIX</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/open-ephys/onix-docs/edit/main/source/Getting Started/index.rst">
+    <a href="https://github.com/open-ephys/onix-docs/edit/main/source/Getting Started/warnings.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -566,7 +531,7 @@ page to learn how to install Bonsai and use it to acquire from ONIX.</p>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../_sources/Getting Started/index.rst.txt">
+    <a href="../_sources/Getting Started/warnings.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
