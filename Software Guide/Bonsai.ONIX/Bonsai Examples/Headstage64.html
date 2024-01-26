@@ -46,7 +46,7 @@
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Latency Test Workflow" href="LatencyTest.html" />
+    <link rel="next" title="Headstage Neuropixels 1.0e Workflow" href="HeadstageNP1e.html" />
     <link rel="prev" title="Example Workflows" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -399,6 +399,7 @@ document.write(`
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Example Workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Headstage-64 Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeadstageNP1e.html">Headstage Neuropixels 1.0e Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="LatencyTest.html">Latency Test Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="CameraSync.html">Camera Synchronization Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Commutator.html">Manual Commutator Workflow</a></li>
@@ -476,7 +477,7 @@ document.write(`
   <section id="headstage-64-workflow">
 <span id="bonsai-headstage64"></span><h1>Headstage-64 Workflow<a class="headerlink" href="#headstage-64-workflow" title="Link to this heading">#</a></h1>
 <p>This example workflow shows how the data streams produced by
-<a class="reference internal" href="../../../Hardware%20Guide/Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> can be acquired and saved. Each group workflow at the top
+<a class="reference internal" href="../../../Hardware%20Guide/Headstages/headstage-64/index.html#headstage-64"><span class="std std-ref">Headstage-64</span></a> can be acquired and saved, as well as used for commutation. Each group workflow at the top
 level contains acquisition code for a different sensor on the headstage. Example
 Python and MATLAB scripts are provided to load the data produced by the
 workflow.</p>
@@ -492,20 +493,20 @@ information</p>
 </dd>
 <dt>RHD2164 Ephys Chip</dt><dd><p>64-channels of extracellular electrophysiology input</p>
 </dd>
-<dt>TS4231 Lighthouse Receivers</dt><dd><p>3D position of the headstage in space when used with approriate lighthouse setup.</p>
+<dt>TS4231 Lighthouse Receivers</dt><dd><p>3D position of the headstage in space when used with appropriate lighthouse setup.</p>
 </dd>
 <dt>Headstage Port Control</dt><dd><p>Control over the headstage port and connectivity status logging</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This workflow does not demonstrate stimulation capabilites of the
+<p>This workflow does not demonstrate stimulation capabilities of the
 headstage. See <a class="reference internal" href="../Nodes/ElectricalStimulationDevice.html#bonsai-estimdev"><span class="std std-ref">ElectricalStimulationDevice</span></a> and <a class="reference internal" href="../Nodes/OpticalStimulationDevice.html#bonsai-ostimdev"><span class="std std-ref">OpticalStimulationDevice</span></a> for
 examples of how to control onboard stimulation.</p>
 </div>
 <section id="loading-scripts">
 <h2>Loading Scripts<a class="headerlink" href="#loading-scripts" title="Link to this heading">#</a></h2>
-<p>The following scripts can be used to load the data produce by this workflow in Python (using Numpy) or MATLAB:</p>
+<p>The following scripts can be used to load the data produced by this workflow in Python (using Numpy) or MATLAB:</p>
 <ul class="simple">
 <li><p>Python: <a class="reference download internal" download="" href="../../../_downloads/dddebe81badd8ecc9ef25abaa4c79155/load_headstage64.py"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.py</span></code></a></p></li>
 <li><p>MATLAB: <a class="reference download internal" download="" href="../../../_downloads/5a77087a61dce4be976356f1563d149d/load_headstage64.m"><code class="xref download docutils literal notranslate"><span class="pre">load_headstage64.m</span></code></a></p></li>
@@ -540,11 +541,11 @@ examples of how to control onboard stimulation.</p>
       </div>
     </a>
     <a class="right-next"
-       href="LatencyTest.html"
+       href="HeadstageNP1e.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Latency Test Workflow</p>
+        <p class="prev-next-title">Headstage Neuropixels 1.0e Workflow</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

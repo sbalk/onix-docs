@@ -399,6 +399,7 @@ document.write(`
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Bonsai%20Examples/index.html">Example Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Headstage64.html">Headstage-64 Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/HeadstageNP1e.html">Headstage Neuropixels 1.0e Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/LatencyTest.html">Latency Test Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/CameraSync.html">Camera Synchronization Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Commutator.html">Manual Commutator Workflow</a></li>
@@ -529,12 +530,13 @@ cost of larger buffering latencies.</p></td>
 </tr>
 <tr class="row-even"><td><p>RequireSNMatch</p></td>
 <td><p>boolean</p></td>
-<td><p>If true, then require configuration and probe serial numbers to match
-to start acqusition. Keeping this parameter set to True is good
+<td><p>If True, the configuration and probe serial numbers must match
+to start acquisition. Keeping this parameter set to True is good
 practice because the correct calibration files must be loaded in order
-for the probe to function properly.</p></td>
+for the probe to function properly.
+Error message if set to True and not properly configured: Probe and configuration serial numbers do not match.</p></td>
 </tr>
-<tr class="row-odd"><td><p>NueuropixelsV1Configuration</p></td>
+<tr class="row-odd"><td><p>NeuropixelsV1Configuration</p></td>
 <td><p>N/A</p></td>
 <td><p>Editing this parameter will open the Configuration GUI, just like
 double clicking on the node.</p></td>
@@ -547,7 +549,7 @@ double clicking on the node.</p></td>
 <p>The <strong>Neuropixels 1.0 Configuration GUI</strong>, which is a part of the
 <code class="docutils literal notranslate"><span class="pre">Bonsai.ONIX.Design</span></code> library, is opened by double clicking on the
 NeuropixelsV1Device node when editing the workflow or clicking the ellipsis
-next to the <code class="docutils literal notranslate"><span class="pre">NueuropixelsV1Configuration</span></code> parameter option in the property
+next to the <code class="docutils literal notranslate"><span class="pre">NeuropixelsV1Configuration</span></code> parameter option in the property
 pane.</p>
 <figure class="align-left" id="id2">
 <img alt="The Neuropixels 1.0 configuration GUI." src="../../../_images/neuropixelsv1_configuration-gui-callouts.png" />
@@ -657,13 +659,13 @@ there is a mismatch. This option is active by default.</p>
 <section id="saving-configurations">
 <h4>Saving Configurations<a class="headerlink" href="#saving-configurations" title="Link to this heading">#</a></h4>
 <p>Complete probe configurations can be saved in easy to parse JSON or XML
-formats. These fikes contain complete information about the state of a given
+formats. These files contain complete information about the state of a given
 probe. This includes all calibration file information, active electrodes, gains
 etc, and therefore can be useful metadata during analysis.</p>
 <ol class="arabic">
 <li><p>Select <strong>Export…</strong> from the <strong>File</strong> menu;</p>
 <blockquote>
-<div><img alt="The configuraiton GUI with export selected" class="align-left" src="../../../_images/neuropixelsv1_export_cropped.png" />
+<div><img alt="The configuration GUI with export selected" class="align-left" src="../../../_images/neuropixelsv1_export_cropped.png" />
 </div></blockquote>
 </li>
 <li><p>Choose if JSON or XML should be used in the file selection dialog and save:</p>
@@ -687,7 +689,7 @@ one before using it.</p>
 <ol class="arabic">
 <li><p>Select <strong>Import</strong> from the <strong>File</strong> menu:</p>
 <blockquote>
-<div><img alt="The configuraiton GUI with import selected" class="align-left" src="../../../_images/neuropixelsv1_import_cropped.png" />
+<div><img alt="The configuration GUI with import selected" class="align-left" src="../../../_images/neuropixelsv1_import_cropped.png" />
 </div></blockquote>
 </li>
 <li><p>Select a previously exported configuration file:</p>

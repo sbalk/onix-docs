@@ -399,6 +399,7 @@ document.write(`
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Bonsai%20Examples/index.html">Example Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Headstage64.html">Headstage-64 Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/HeadstageNP1e.html">Headstage Neuropixels 1.0e Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/LatencyTest.html">Latency Test Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/CameraSync.html">Camera Synchronization Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Commutator.html">Manual Commutator Workflow</a></li>
@@ -475,6 +476,10 @@ document.write(`
                   
   <section id="onicontext">
 <span id="bonsai-onicontext"></span><h1>ONIContext<a class="headerlink" href="#onicontext" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This node configures hardware parameters when it is placed in a workflow, even if the workflow is not running. Always check voltage configurations before connecting headstages to the system.</p>
+</div>
 <p>A <a class="reference external" href="https://bonsai-rx.org/docs/editor/#toolbox">Bonsai source</a> that manages a
 <a class="reference internal" href="../../../API%20Reference/liboni/oni.html#oni-h-acquisition-context"><span class="std std-ref">Acquisition Context</span></a> and allows basic acquisition parameterization.
 There must be at least one of these in every workflow that uses ONIX hardware.</p>
@@ -607,7 +612,7 @@ single <em>Sync Channel</em>.</p>
 </dl>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Only the aquisition start trigger is shared from Sources to
+<p>Only the acquisition start trigger is shared from Sources to
 Listeners. The acquisition clock may or may not be shared depending on the
 type of host hardware being used. For example, if all hardware consists of
 <a class="reference internal" href="../../../Hardware%20Guide/PCIe%20Host/index.html#pcie-host"><span class="std std-ref">PCIe Hosts</span></a> on the same motherboard, then both start

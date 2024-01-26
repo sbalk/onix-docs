@@ -399,6 +399,7 @@ document.write(`
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Bonsai%20Examples/index.html">Example Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Headstage64.html">Headstage-64 Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/HeadstageNP1e.html">Headstage Neuropixels 1.0e Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/LatencyTest.html">Latency Test Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/CameraSync.html">Camera Synchronization Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Bonsai%20Examples/Commutator.html">Manual Commutator Workflow</a></li>
@@ -479,6 +480,11 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p>To use this device with ONIX hardware, you must first use the <a class="reference internal" href="ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> configuration GUI to set the headstage port to <a class="reference internal" href="ONIContext.html#bonsai-onicontext-hubsettings"><span class="std std-ref">“Passthrough Mode”</span></a></p>
 </div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Bonsai workflows that contain this node will not
+open/load unless the headstage is on - Error message: There was an error opening the workflow. Make sure to configure the headstage port voltage and mode correctly using the <a class="reference internal" href="ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node with the parameters for the <a class="reference internal" href="../../../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> before connecting the headstage.</p>
+</div>
 <p>A <a class="reference external" href="https://bonsai-rx.org/docs/editor/#toolbox">Bonsai source</a>  that wraps a
 Neuropixels 1.0e device.</p>
 <dl class="field-list">
@@ -513,38 +519,6 @@ dedicated configuration GUI.</p>
 <section id="property-pane">
 <h3>Property Pane<a class="headerlink" href="#property-pane" title="Link to this heading">#</a></h3>
 <p>Parameters available through the property pane are as follows:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>EnableStream</p></td>
-<td><p>boolean</p></td>
-<td><p>Enable the device data stream</p></td>
-</tr>
-<tr class="row-odd"><td><p>BlockSize</p></td>
-<td><p>integer</p></td>
-<td><p>The number of Ultraframes that are included in each
-NeuropixelsV1eDataFrame. Larger numbers result in less overhead at the
-cost of larger buffering latencies.</p></td>
-</tr>
-<tr class="row-even"><td><p>RequireSNMatch</p></td>
-<td><p>boolean</p></td>
-<td><p>If true, then require configuration and probe serial numbers to match
-to start acqusition. Keeping this parameter set to True is good
-practice because the correct calibration files must be loaded in order
-for the probe to function properly.</p></td>
-</tr>
-<tr class="row-odd"><td><p>NeuropixelsV1Configuration</p></td>
-<td><p>N/A</p></td>
-<td><p>Editing this parameter will open the Configuration GUI, just like
-double clicking on the node.</p></td>
-</tr>
-</tbody>
-</table>
 </section>
 <section id="configuration-gui">
 <h3>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Link to this heading">#</a></h3>
@@ -661,13 +635,13 @@ there is a mismatch. This option is active by default.</p>
 <section id="saving-configurations">
 <h4>Saving Configurations<a class="headerlink" href="#saving-configurations" title="Link to this heading">#</a></h4>
 <p>Complete probe configurations can be saved in easy to parse JSON or XML
-formats. These fikes contain complete information about the state of a given
+formats. These files contain complete information about the state of a given
 probe. This includes all calibration file information, active electrodes, gains
 etc, and therefore can be useful metadata during analysis.</p>
 <ol class="arabic">
 <li><p>Select <strong>Export…</strong> from the <strong>File</strong> menu;</p>
 <blockquote>
-<div><img alt="The configuraiton GUI with export selected" class="align-left" src="../../../_images/neuropixelsv1_export_cropped.png" />
+<div><img alt="The configuration GUI with export selected" class="align-left" src="../../../_images/neuropixelsv1_export_cropped.png" />
 </div></blockquote>
 </li>
 <li><p>Choose if JSON or XML should be used in the file selection dialog and save:</p>
@@ -691,7 +665,7 @@ one before using it.</p>
 <ol class="arabic">
 <li><p>Select <strong>Import</strong> from the <strong>File</strong> menu:</p>
 <blockquote>
-<div><img alt="The configuraiton GUI with import selected" class="align-left" src="../../../_images/neuropixelsv1_import_cropped.png" />
+<div><img alt="The configuration GUI with import selected" class="align-left" src="../../../_images/neuropixelsv1_import_cropped.png" />
 </div></blockquote>
 </li>
 <li><p>Select a previously exported configuration file:</p>
