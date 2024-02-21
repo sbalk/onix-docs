@@ -46,6 +46,8 @@
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hardware Guide" href="../Hardware%20Guide/index.html" />
+    <link rel="prev" title="What is ONIX?" href="whatisonix.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,7 +133,7 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
                         Getting Started
                       </a>
@@ -146,15 +148,15 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -253,7 +255,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -271,7 +273,7 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
                         Getting Started
                       </a>
@@ -286,15 +288,15 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -358,6 +360,18 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="whatisonix.html">What is ONIX?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Usage Warnings</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -390,6 +404,9 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Getting Started</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page">Usage Warnings</li>
   </ul>
 </nav>
@@ -407,70 +424,104 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="usage-warnings">
-<span id="warnings"></span><h1>Usage Warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h1>
+  <div class="toctree-wrapper compound" id="warnings">
+</div>
+<section id="usage-warnings">
+<h1>Usage Warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Improper setup and usage can cause damage to system components.</p>
 </div>
 <ul class="simple">
-<li><p>Read the following warnings before starting to work with your system. These are crucial aspects to consider during setup and usage that are included in the documentation but are listed here for your convenience.</p></li>
-<li><p>Read the complete documentation carefully to understand how the system works and refer back to these warnings before using it.</p></li>
+<li><p>Read the following warnings before starting to work with your system. These are crucial
+aspects to consider during setup and usage that are included in the documentation but
+are listed here for your convenience.</p></li>
+<li><p>Read the complete documentation carefully to understand how the system works and refer
+back to these warnings before using it.</p></li>
 </ul>
 <section id="hardware">
 <h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h2>
-<ul>
-<li><p>Connecting or disconnecting the breakout board while the PC is on causes damage to the FMChost. More: <a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/setup.html#breakout-setup"><span class="std std-ref">Breakout Board Guide</span></a>.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Power off the PC before connecting/disconnecting the breakout board.</strong></p></li>
+<ul class="simple">
+<li><p>Connecting or disconnecting the breakout board while the PC is on causes damage to the
+FMChost. For more details, see <a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/setup.html#breakout-setup"><span class="std std-ref">Breakout Board Guide</span></a>.</p></li>
 </ul>
-</div></blockquote>
-</li>
-<li><p>Headstage voltage must be configured correctly for operation. The voltage that works for one headstage can damage another, and depends on your hardware configuration such as tether length. More: <a class="reference internal" href="../Hardware%20Guide/Headstages/tether-voltage.html#tether-voltage"><span class="std std-ref">Tethered Headstage Voltages</span></a>.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Ensure each headstage is configured with the correct voltage according to its specification before connecting and switching on the headstage port switch.</strong></p></li>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Power off the PC before connecting/disconnecting the breakout board.</strong></p>
+</div>
+<ul class="simple">
+<li><p>Headstage voltage must be configured correctly for operation. The voltage that works
+for one headstage can damage another, and depends on your hardware configuration such
+as tether length. For more details, see <a class="reference internal" href="../Hardware%20Guide/Headstages/tether-voltage.html#tether-voltage"><span class="std std-ref">Tethered Headstage Voltages</span></a>.</p></li>
 </ul>
-</div></blockquote>
-</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Ensure each headstage is configured with the correct voltage according to its
+specification before connecting and switching on the headstage port switch.</strong></p>
+</div>
 </section>
 <section id="software">
 <h2>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h2>
 <p><em>For the current Bonsai.ONIX library which is being revised to improve usability</em></p>
-<ul>
-<li><p>Headstage port voltage configuration is managed via the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node or the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node. The changes you make using these nodes apply immediately and persist in hardware even if the Bonsai workflow is not running. Headstage port voltage is reset to the default 4.9V only on a power cycle (power off and on — not reboot).</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Keep the headstage port switches off until you have configured each port correctly.</strong></p></li>
-<li><p><strong>Remember to set the headstage voltage to the desired value after a power cycle.</strong></p></li>
+<ul class="simple">
+<li><p>Headstage port voltage configuration is managed via the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node
+or the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node. The changes you make using these
+nodes apply immediately and persist in hardware even if the Bonsai workflow is not
+running. Headstage port voltage is reset to the default 4.9V only on a power cycle
+(power off and on — not reboot).</p></li>
 </ul>
-</div></blockquote>
-</li>
-<li><p>The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> provides a dynamic window to read and write to hardware, but parameters such as device voltage are not saved in the node when the workflow is saved. The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node also reads and writes to hardware, but parameters are saved with the workflow. On loading a workflow, Bonsai writes the parameter values set when the workflow was last saved.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node shows that value and when you save the workflow this value is not saved. Therefore, that value will not be set to hardware when you load the workflow again. On loading the workflow, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node will be reading the voltage that is already set on the hardware and showing this  in the <code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> field.</p></li>
-<li><p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node shows that value and when you save the workflow this value is saved. Therefore, that value will be set to hardware when you load the workflow again. If you make changes to the voltage value (with any node) and save the workflow, they will be saved in the <code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> property of the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node.</p></li>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Keep the headstage port switches off until you have configured each port correctly.</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Remember to set the headstage voltage to the desired value after a power cycle.</strong></p>
+</div>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> provides a dynamic window to read and write to hardware,
+but parameters such as device voltage are not saved in the node when the workflow is
+saved. The <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node also reads and writes to hardware,
+but parameters are saved with the workflow. On loading a workflow, Bonsai writes the
+parameter values set when the workflow was last saved.</p></li>
 </ul>
-</div></blockquote>
-</li>
-<li><p>Any workflows containing the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node require the <a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> to be connected before the workflows can be opened or loaded into Bonsai.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Check that the voltage set to the headstage port is correct for the <a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> by using a workflow of a single <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node to configure it before connecting the headstage in order to open a workflow that contains the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node.</p></li>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node shows that value
+and when you save the workflow this value is not saved. Therefore, that value will
+not be set to hardware when you load the workflow again. On loading the workflow,
+the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node will be reading the voltage that is already set
+on the hardware and showing this  in the <code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> field.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you configure the voltage, the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node shows
+that value and when you save the workflow this value is saved. Therefore, that value
+will be set to hardware when you load the workflow again. If you make changes to the
+voltage value (with any node) and save the workflow, they will be saved in the
+<code class="docutils literal notranslate"><span class="pre">LinkVoltage</span></code> property of the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/HeadstagePortControlDevice.html#bonsai-headstageportcontroldev"><span class="std std-ref">HeadstagePortControlDevice</span></a> node.</p>
+</div>
+<ul class="simple">
+<li><p>Any workflows containing the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node require the
+<a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> to be connected before the workflows can be opened or
+loaded into Bonsai.</p></li>
 </ul>
-</div></blockquote>
-</li>
-<li><p>An <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node or any device node in a workflow can override device settings in another workflow if device addresses are not distinct, because these nodes read/write directly to hardware.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Only have one workflow open at a time.</p></li>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Check that the voltage set to the headstage port is correct for the
+<a class="reference internal" href="../Hardware%20Guide/Headstages/headstage-neuropix-1e.html#headstage-neuropix1e"><span class="std std-ref">Neuropixels-1.0e Headstage</span></a> by using a workflow of a single <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a>
+node to configure it before connecting the headstage in order to open a workflow that
+contains the <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/NeuropixelsV1eDevice.html#bonsai-neuropixelsv1edev"><span class="std std-ref">NeuropixelsV1eDevice</span></a> node.</p>
+</div>
+<ul class="simple">
+<li><p>An <a class="reference internal" href="../Software%20Guide/Bonsai.ONIX/Nodes/ONIContext.html#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node or any device node in a workflow can override device
+settings in another workflow if device addresses are not distinct, because these nodes
+read/write directly to hardware.</p></li>
 </ul>
-</div></blockquote>
-</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Only have one workflow open at a time.</strong></p>
+</div>
 </section>
 </section>
 
@@ -491,6 +542,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="whatisonix.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What is ONIX?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Hardware%20Guide/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"> Hardware Guide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>

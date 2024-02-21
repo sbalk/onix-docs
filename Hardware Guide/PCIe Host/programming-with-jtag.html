@@ -146,15 +146,15 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -286,15 +286,15 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -407,13 +407,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="programming-a-blank-pcie-host-windows">
-<span id="pcie-host-program-over-jtag"></span><h1>Programming a Blank PCIe Host (Windows)<a class="headerlink" href="#programming-a-blank-pcie-host-windows" title="Link to this heading">#</a></h1>
+  <div class="toctree-wrapper compound">
+</div>
+<section id="programming-a-blank-pcie-host-windows">
+<h1>Programming a Blank PCIe Host (Windows)<a class="headerlink" href="#programming-a-blank-pcie-host-windows" title="Link to this heading">#</a></h1>
 <ol class="arabic">
 <li><p>If you have not done so already, follow the steps on the <a class="reference internal" href="setup-windows.html#pcie-host-setup-windows"><span class="std std-ref">Setup Guide for Windows</span></a> page.</p></li>
 <li><p>Download and install Vivado Lab Edition here: <a class="reference external" href="https://www.xilinx.com/support/download.html">https://www.xilinx.com/support/download.html</a>.</p></li>
-<li><p>Download <span class="xref std std-ref">pcie_host_bootloader_download</span>.</p></li>
-<li><p>Download the most recent <a class="reference internal" href="../../downloads.html#pcie-host-image-download"><span class="std std-ref">PCIe Host Firmware</span></a> that is compatible with your hardware</p></li>
+<li><p>Download <strong>PCIe Host Bootloader</strong>.</p></li>
+<li><p>Download the most recent <a class="reference internal" href="../../Resources/downloads.html#pcie-host-image-download"><span class="std std-ref">PCIe Host Firmware</span></a> that is compatible with your hardware</p></li>
 <li><p>Open Vivado and click open Hardware manager on splash screen</p></li>
 <li><p>Clock on “Tools” and select “Generate Memory Configuration File…”</p>
 <figure class="align-center">
@@ -474,10 +476,10 @@ file” field. Click OK to flash the PCIe host board.</p>
 </figure>
 </li>
 <li><p>Power off the computer and then restart.</p></li>
-<li><p>Open the Device Manager from the Windows Search Bar and you should you
+<li><p>Open the Device Manager from the Windows Search Bar and you
 should see a RIFFA in there.</p></li>
 <li><p>After this, you will be able to quickly upgrade your PCIe Host over PCIe by
-following the steps on the <span class="xref std std-ref">pcie_host_gateware_drivers</span> page.</p></li>
+following the steps on the <strong>pcie_host_gateware_drivers</strong> page.</p></li>
 </ol>
 </section>
 

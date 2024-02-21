@@ -148,15 +148,15 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -288,15 +288,15 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../API%20Reference/index.html">
-                         API Reference
+                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
+                         Software Guide
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Software%20Guide/index.html">
-                         Software Guide
+                      <a class="nav-link nav-internal" href="../Resources/index.html">
+                         Resources
                       </a>
                     </li>
                 
@@ -366,6 +366,7 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whatisonix.html">What is ONIX?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Usage Warnings</a></li>
 </ul>
 </div>
 </nav></div>
@@ -420,25 +421,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="getting-started">
-<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="toctree-wrapper compound" id="getting-started">
 </div>
+<section id="id1">
+<h1>Getting Started<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="understanding-the-system">
 <h2>Understanding the System<a class="headerlink" href="#understanding-the-system" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Read <a class="reference internal" href="whatisonix.html#what-is-onix"><span class="std std-ref">‘What is ONIX?’</span></a> for a high-level introduction to
 this hardware and how it differs from other neuroscience acquisition
 systems.</p></li>
-<li><p>Our <a class="reference internal" href="../faq.html#faq"><span class="std std-ref">FAQ</span></a> contains answers to general questions about the system.</p></li>
+<li><p>Our <a class="reference internal" href="../Resources/faq.html#faq"><span class="std std-ref">FAQ</span></a> contains answers to general questions about the system.</p></li>
 <li><p>See the <a class="reference internal" href="../Hardware%20Guide/index.html#hardware-guide"><span class="std std-ref"> Hardware Guide</span></a> for a description of each ONIX hardware component and decide which you will need.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To understand the underlying hardware specifications, check out the <a class="reference external" href="https://open-ephys.github.io/ONI/hw-spec/index.html">ONI Hardware Specification</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For developers who want to dig into the API, check out the <a class="reference external" href="https://open-ephys.github.io/ONI/api/index.html">ONI API Documentation</a>.</p>
+</div>
 </section>
 <section id="usage-warnings">
-<h2>Usage warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Read <a class="reference internal" href="warnings.html#warnings"><span class="std std-ref">Usage Warnings</span></a> before starting to work with the system to avoid causing damage to system components.</p></li>
-</ul>
+<h2>Usage Warnings<a class="headerlink" href="#usage-warnings" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Read <a class="reference internal" href="warnings.html#warnings"><span class="std std-ref">Usage Warnings</span></a> before starting to work with the system to avoid causing damage to system components.</p>
+</div>
 </section>
 <section id="setting-up-onix">
 <h2>Setting up ONIX<a class="headerlink" href="#setting-up-onix" title="Link to this heading">#</a></h2>
@@ -468,7 +478,7 @@ SDR 26 POS)</p></li>
 <li><p>Install the PCIe host board and configure the acquisition computer by
 following the <a class="reference internal" href="../Hardware%20Guide/PCIe%20Host/setup-windows.html#pcie-host-setup-windows"><span class="std std-ref">Setup Guide for Windows</span></a>.</p></li>
 <li><p><a class="reference internal" href="../Hardware%20Guide/Lighthouses/setup.html#lighthouse-setup"><span class="std std-ref">Mount and connect the 3D-Tracking Lighthouses</span></a></p></li>
-<li><p><a class="reference internal" href="../Hardware%20Guide/Commutators/setup.html#commutator-setup"><span class="std std-ref">Mount and connect the commutator</span></a></p></li>
+<li><p><a class="reference internal" href="../Hardware%20Guide/Commutators/index.html#commutators"><span class="std std-ref">Mount and connect the commutator</span></a></p></li>
 <li><p><a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/setup.html#breakout-setup"><span class="std std-ref">Connect the Breakout Board to the PCIe host board</span></a>.</p></li>
 <li><p>Connect a headstage, Miniscope V4 or other ONI compliant recording device by
 <a class="reference internal" href="../Hardware%20Guide/Headstages/setup.html#headstage-setup"><span class="std std-ref">following these steps</span></a>. Be sure to read <a class="reference internal" href="../Hardware%20Guide/Headstages/tether-voltage.html#tether-voltage"><span class="std std-ref">this
@@ -543,7 +553,7 @@ page to learn how to install Bonsai and use it to acquire from ONIX.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-system">Understanding the System</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-warnings">Usage warnings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-warnings">Usage Warnings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-onix">Setting up ONIX</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-onix">Using ONIX</a></li>
 </ul>
