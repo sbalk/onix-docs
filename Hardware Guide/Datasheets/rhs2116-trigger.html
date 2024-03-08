@@ -522,6 +522,18 @@ chips.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x00</p></td>
+<td><p>ENABLE</p></td>
+<td><p>R/W</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>ONI required enable register</p>
+<ul class="simple">
+<li><p>This register has no effect. Writes will be ignored without error.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
 <td><p>TRIGGERSOURCE</p></td>
 <td><p>R/W</p></td>
 <td><p>Immediate</p></td>
@@ -538,7 +550,7 @@ TRIGGERSOURCE = 0x1 (receiver).</p></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>0x01</p></td>
+<tr class="row-even"><td><p>0x02</p></td>
 <td><p>TRIGGER</p></td>
 <td><p>W</p></td>
 <td><p>Immediate</p></td>
