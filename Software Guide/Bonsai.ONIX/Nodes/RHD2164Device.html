@@ -42,6 +42,7 @@
     <script src="../../../_static/copyURLToClipboard.js?v=6c4d178e"></script>
     <script src="https://wavedrom.com/skins/default.js"></script>
     <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Software Guide/Bonsai.ONIX/Nodes/RHD2164Device';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -536,10 +537,16 @@ conversion.</p></td>
 <tr class="row-odd"><td><p>EphysDataFormat</p></td>
 <td><p>enum</p></td>
 <td><p>The format of the ephys samples within the  RHD2164DataFrame.</p>
-<ul class="simple">
-<li><p>Unsigned: raw 16-bit unsigned integer conversion results.</p></li>
-<li><p>TwosCompliment: raw 16-bit signed integer conversion results.</p></li>
-<li><p>MicroVolts: 32-bit floating-point voltages.</p></li>
+<ul>
+<li><p>Unsigned: raw 16-bit unsigned integer conversion results in offset binary.</p>
+<div class="math notranslate nohighlight">
+\[\mu V = 0.195 \mu V/LSB * (Sample - 32768.0)\]</div>
+</li>
+<li><p>TwosCompliment: raw 16-bit signed integer conversion results in two’s complement.</p>
+<div class="math notranslate nohighlight">
+\[\mu V = 0.195 \mu V/LSB * Sample\]</div>
+</li>
+<li><p>MicroVolts: 32-bit floating-point sample values in microvolts.</p></li>
 </ul>
 </td>
 </tr>
