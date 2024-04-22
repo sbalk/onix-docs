@@ -375,6 +375,7 @@ document.write(`
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Nodes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">ONIContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="HeartbeatDevice.html">HeartbeatDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MemoryUsageDevice.html">MemoryUsageDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AnalogIODevice.html">AnalogIODevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="DigitalIODevice.html">DigitalIODevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ClockOutputDevice.html">ClockOutputDevice</a></li>
@@ -536,7 +537,7 @@ present in a single computer, then each will need its own
 </div>
 </section>
 <section id="configuration-gui">
-<h2>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Link to this heading">#</a></h2>
+<span id="bonsai-onicontext-configuration"></span><h2>Configuration GUI<a class="headerlink" href="#configuration-gui" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> configuration is performed using a GUI provided in the
 Bonsai.ONIX.Design library. It can be opened by double clicking on the
 <a class="reference internal" href="#bonsai-onicontext"><span class="std std-ref">ONIContext</span></a> node if Bonsai.ONIX.Design has been installed.</p>
@@ -548,10 +549,10 @@ using the <strong>Properties Pane</strong> on the right side of the form.</p>
 <li><p><strong>Settings</strong>: Drop down menu that provides several hardware configuration options</p></li>
 <li><p><strong>Driver</strong>: The device driver used to control the host hardware.</p></li>
 <li><p><strong>Slot</strong>: The physical slot of the Host hardware in the computer.</p></li>
-<li><p><strong>Read Block Size</strong>: The number of bytes read per call to the kernel driver.
+<li><p><strong>Block Read Size</strong>: The number of bytes read per call to the kernel driver.
 Larger numbers <em>will generally</em> increase overall bandwidth and decrease
 response latency.</p></li>
-<li><p><strong>Write Block Size</strong>: The number of bytes pre-allocated to make output for output
+<li><p><strong>Block Write Size</strong>: The number of bytes pre-allocated to make output for output
 data frames. Larger numbers <em>may</em> increase overall bandwidth and decrease
 response latency.</p></li>
 <li><p><a class="reference internal" href="../../../_images/ONIContext_refresh-icon.png"><img alt="refresh_icon" src="../../../_images/ONIContext_refresh-icon.png" style="height: 19px;" /></a> <strong>&lt;status&gt;</strong>: Shows the current host hardware connection status.
