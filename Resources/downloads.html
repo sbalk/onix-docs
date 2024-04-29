@@ -520,14 +520,41 @@ using mac or linux, you will need to compile from <a class="reference external" 
 <p class="admonition-title">Note</p>
 <p>Please see <a class="reference internal" href="../Hardware%20Guide/PCIe%20Host/updating-firmware.html#pcie-host-firmware-update"><span class="std std-ref">Updating PCIe Host Firmware</span></a> for instructions on how to use these files.</p>
 </div>
-</section>
-<section id="hardware-revision-1-4">
-<h2>Hardware Revision 1.4<a class="headerlink" href="#hardware-revision-1-4" title="Link to this heading">#</a></h2>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Please <a class="reference internal" href="support.html#support"><span class="std std-ref">get in touch</span></a> so that we can provide the latest firmware
-for your board.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure that the host firmware image you download matches the PCIe Host Hardware version you have
+as shown in the table below. An incorrect firmware version will not report any error while updating but will cause failures during operation.</p>
 </div>
+<table class="table">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><dl class="simple">
+<dt>PCIe Host Hardware version</dt><dd><p>as reported by <cite>oni-repl</cite></p>
+</dd>
+</dl>
+</th>
+<th class="head"><dl class="simple">
+<dt>PCIe Host Firmware latest version</dt><dd><p>to download and update</p>
+</dd>
+</dl>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hardware Revision 1.4</p></td>
+<td><p>Deprecated. Please <a class="reference internal" href="support.html#support"><span class="std std-ref">get in touch</span></a> so we can assist you.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hardware Revision 1.5</p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/cd048d80512bf344c6ac16489c5c8b36/onix-host-v1.1-update-revD.bin"><code class="xref download docutils literal notranslate"><span class="pre">Firmware</span> <span class="pre">version</span> <span class="pre">1.1D</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Hardware Revision 1.6</p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/50ce2137399bb0c7cab85c50b1b9cbb7/onix-host-v1.1-update-revF.bin"><code class="xref download docutils literal notranslate"><span class="pre">Firmware</span> <span class="pre">version</span> <span class="pre">1.1F</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -588,7 +615,6 @@ for your board.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pcie-host-updater">PCIe Host Updater</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riffa-device-driver">RIFFA Device Driver</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pcie-host-firmware">PCIe Host Firmware</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-revision-1-4">Hardware Revision 1.4</a></li>
 </ul>
   </nav></div>
 
