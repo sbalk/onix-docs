@@ -485,6 +485,34 @@ using mac or linux, you will need to compile from <a class="reference external" 
 </table>
 <hr class="docutils" />
 </section>
+<section id="breakout-board-updater">
+<span id="breakout-updater-download"></span><h2>Breakout Board Updater<a class="headerlink" href="#breakout-board-updater" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please see <a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/updating-breakout-firmware.html#breakout-firmware-update"><span class="std std-ref">Updating Breakout Board Firmware</span></a> for instructions on how to use these files.</p>
+</div>
+<table class="table" id="id4">
+<caption><span class="caption-text">Breakout Board update tools</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 25.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Release Date</p></th>
+<th class="head"><p>Release Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference download internal" download="" href="../_downloads/90c3af755a1c7de38290b0cdaea92f0c/tinyprog.zip"><code class="xref download docutils literal notranslate"><span class="pre">1.0.0</span></code></a></p></td>
+<td><p>2024.07.05</p></td>
+<td><p>Initial release.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</section>
 <section id="riffa-device-driver">
 <span id="riffa-driver-download"></span><h2>RIFFA Device Driver<a class="headerlink" href="#riffa-device-driver" title="Link to this heading">#</a></h2>
 <div class="admonition note">
@@ -492,8 +520,8 @@ using mac or linux, you will need to compile from <a class="reference external" 
 <p>Please see <a class="reference internal" href="../Hardware%20Guide/PCIe%20Host/updating-firmware.html#pcie-host-firmware-update"><span class="std std-ref">Updating PCIe Host Firmware</span></a> for instructions on how to use these files. When
 using mac or linux, you will need to compile from <a class="reference external" href="https://github.com/open-ephys/liboni">source</a>.</p>
 </div>
-<table class="table" id="id4">
-<caption><span class="caption-text">RIFFA PCIe driver</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<table class="table" id="id5">
+<caption><span class="caption-text">RIFFA PCIe driver</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 15.0%" />
 <col style="width: 25.0%" />
@@ -556,6 +584,45 @@ as shown in the table below. An incorrect firmware version will not report any e
 </tbody>
 </table>
 </section>
+<section id="breakout-board-firmware">
+<span id="breakout-image-download"></span><h2>Breakout Board Firmware<a class="headerlink" href="#breakout-board-firmware" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please see <a class="reference internal" href="../Hardware%20Guide/Breakout%20Board/updating-breakout-firmware.html#breakout-firmware-update"><span class="std std-ref">Updating Breakout Board Firmware</span></a> for instructions on how to use these files.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure that the breakout board firmware image you download matches the breakout board hardware version you have
+as shown in the table below. An incorrect firmware version will not report any error while updating but will cause failures during operation.</p>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><dl class="simple">
+<dt>Breakout Board Hardware version</dt><dd><p>as per product specs</p>
+</dd>
+</dl>
+</th>
+<th class="head"><dl class="simple">
+<dt>Breakout Board Firmware latest version</dt><dd><p>to download and update</p>
+</dd>
+</dl>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hardware Revision 1.5  (four headstage ports)</p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/9d1db7c8853f0c247c54a8053fad210c/breakout-rev1.5-fw1.3.bin"><code class="xref download docutils literal notranslate"><span class="pre">Firmware</span> <span class="pre">version</span> <span class="pre">1.3</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Hardware Revision 1.6  (two headstage ports)</p></td>
+<td><p><a class="reference download internal" download="" href="../_downloads/023fdb2d292d21801803a979421f6c63/breakout-rev1.6-fw1.3.bin"><code class="xref download docutils literal notranslate"><span class="pre">Firmware</span> <span class="pre">version</span> <span class="pre">1.3</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 
     <script type="text/javascript">
@@ -613,8 +680,10 @@ as shown in the table below. An incorrect firmware version will not report any e
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oni-repl-console-application"><cite>oni-repl</cite> Console Application</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pcie-host-updater">PCIe Host Updater</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breakout-board-updater">Breakout Board Updater</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riffa-device-driver">RIFFA Device Driver</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pcie-host-firmware">PCIe Host Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breakout-board-firmware">Breakout Board Firmware</a></li>
 </ul>
   </nav></div>
 

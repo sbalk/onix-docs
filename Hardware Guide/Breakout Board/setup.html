@@ -46,7 +46,7 @@
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Headstages" href="../Headstages/index.html" />
+    <link rel="next" title="Updating Breakout Board Firmware in Windows" href="updating-breakout-firmware.html" />
     <link rel="prev" title="Breakout Board" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -374,6 +374,7 @@ document.write(`
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Breakout Board</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Breakout Board Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updating-breakout-firmware.html">Updating Breakout Board Firmware in Windows</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Headstages/index.html">Headstages</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -516,6 +517,13 @@ on a particular host board. For instance, <a class="reference internal" href="..
 links, but the breakout board provides four. This is is by design. The breakout
 is designed to be compatible with future host hardware.</p>
 </div>
+<section id="reset-button">
+<h3>Reset Button<a class="headerlink" href="#reset-button" title="Link to this heading">#</a></h3>
+<p>There are two holes on the breakout board that allow access to the onboard FPGA reset button and status LED.
+The reset hole is located just below the ‘Digital Out’ marking, and can be used to access the reset button on the onboard FPGA by inserting a thin wire or pin.
+The onboard FPGA status can be inspected by looking into the status LED hole.</p>
+<a class="reference internal image-reference" href="../../_images/breakout_reset.png"><img alt="../../_images/breakout_reset.png" class="align-center" src="../../_images/breakout_reset.png" style="width: 50%;" /></a>
+</section>
 <section id="sdr-cable">
 <h3>SDR Cable<a class="headerlink" href="#sdr-cable" title="Link to this heading">#</a></h3>
 <p>Plug in the SDR cable for analog and digital I/O.</p>
@@ -532,8 +540,7 @@ active host</p>
 <p>Some boards have a bug in the power on sequence that means a
 reset is required before the board will work. This has been fixed in later
 revisions. If the RGB LEDs remain off after plugging in the SDR cable,
-reset the Breakout Board by inserting a thin wire or screw driver into the
-small hole just below the ‘Digital Out’ marking to reset the onboard FPGA.</p>
+reset the Breakout Board by pressing the onboard FPGA reset button (see above).</p>
 </div>
 </li>
 </ul>
@@ -564,13 +571,13 @@ connect and remove MMCX cables without damaging the connector.</p>
 <p>RGB LEDs indicate various port states, signal directions, digital signals, and
 acquisition states, etc. The following diagrams provide definitions for each
 LED color on the breakout board.</p>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/rgb-leds_callouts.png"><img alt="../../_images/rgb-leds_callouts.png" src="../../_images/rgb-leds_callouts.png" style="width: 100%;" /></a>
 <figcaption>
 <p><span class="caption-text">Indication LED legend. Half-filled circles indicate a flashing LED. An
 error status on a headstage port indicates a loss of lock during
 acquisition. The headstage connection must be re-established and
-acquisition restarted.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+acquisition restarted.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -594,12 +601,12 @@ one bit in a 6-bit word. For exampled</p>
 </dl>
 <p>Additional, pressing button 0  will toggle indication LED power. This allows
 all LEDs to be completely turned off for light-sensitive experiments.</p>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/buttons_labelled.png"><img alt="../../_images/buttons_labelled.png" src="../../_images/buttons_labelled.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-text">Numbers show integer value transmitted to host from pressing each. The
 first button also controls the illumination state of the indication LEDs on
-the breakout board.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+the breakout board.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -609,17 +616,8 @@ the breakout board.</span><a class="headerlink" href="#id3" title="Link to this 
 <p>The breakout board contains a <a class="reference external" href="https://github.com/tinyfpga/TinyFPGA-BX">TinyFPGA BX</a> (Lattice ICE40 breakout board) for
 digital input serialization, digital output deserialization, interpreting user
 input, and driving indication LEDs. The <a class="reference external" href="https://github.com/open-ephys/onix-breakout/tree/main/gateware">breakout board gateware</a> is
-impelemented using an open-source toolchain (<a class="reference external" href="https://yosyshq.net/yosys/">Yosys</a> and <a class="reference external" href="https://github.com/YosysHQ/nextpnr">NextPnR</a>).</p>
-<section id="updating-the-gateware">
-<h3>Updating the Gateware<a class="headerlink" href="#updating-the-gateware" title="Link to this heading">#</a></h3>
-<p>If Open Ephys team have provided you with an updated firmware file for the
-Breakout Board, the micro-USB port on the Breakout Board (labelled ‘config’)
-can be used to update the firmware on the board.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Link and instructions</p>
-</div>
-</section>
+implemented using an open-source toolchain (<a class="reference external" href="https://yosyshq.net/yosys/">Yosys</a> and <a class="reference external" href="https://github.com/YosysHQ/nextpnr">NextPnR</a>).</p>
+<p>Follow the instructions in <a class="reference internal" href="updating-breakout-firmware.html#breakout-firmware-update"><span class="std std-ref">Updating Breakout Board Firmware</span></a> to update the breakout board firmware to the latest version.</p>
 </section>
 </section>
 
@@ -650,11 +648,11 @@ can be used to update the firmware on the board.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Headstages/index.html"
+       href="updating-breakout-firmware.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Headstages</p>
+        <p class="prev-next-title">Updating Breakout Board Firmware in Windows</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -677,16 +675,14 @@ can be used to update the firmware on the board.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reset-button">Reset Button</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sdr-cable">SDR Cable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mmcx-cables">MMCX Cables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leds">LEDs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buttons">Buttons</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gateware">Gateware</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-the-gateware">Updating the Gateware</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gateware">Gateware</a></li>
 </ul>
   </nav></div>
 
